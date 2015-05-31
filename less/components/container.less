@@ -1,0 +1,23 @@
+@import "../variables.less";
+@import "mixins.less";
+
+@container-height: 24.78vw;
+
+#container(){
+	height: @container-height;
+}
+
+.container{
+	#container();
+	width: 50%;
+}
+
+.container--s{
+	#container();
+	width: 25%;
+}
+
+.container--l{
+	#container();
+	width: 100%;
+}
