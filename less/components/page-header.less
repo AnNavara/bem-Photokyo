@@ -1,18 +1,29 @@
 @import "../variables.less";
 @import "mixins.less";
 
+#nav(){
+	padding: 8rem;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+}
+
 .page-header{
 	position: relative;
 	width: 100%;
+	min-height: 12.5rem;
 
 	&__nav{
+		#nav();
 		position: absolute;
-		padding: 80px 80px;
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
+
+		&--alt{
+			#nav();
+			padding: 2.5rem 8rem;
+		}
 	}
 
 	&__wrapper{

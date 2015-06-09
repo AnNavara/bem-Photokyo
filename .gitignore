@@ -6,6 +6,12 @@ backup
 
 node_modules
 
+_icon
+
+bower_components
+
+bin
+
 
 # Windows image file caches
 Thumbs.db

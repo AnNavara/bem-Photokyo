@@ -2,9 +2,13 @@
 @import "mixins.less";
 
 .price{
+	#flex-center();
 	background-color: @color--price;
+	background-image: @bg-price;
+	background-repeat: no-repeat;
+	background-size: cover;
 
-	>.container--l{
-		#flex-center();
+	&:hover>.additional-link{
+		border-color: @white;
 	}
 }

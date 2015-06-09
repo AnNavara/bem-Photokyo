@@ -1,0 +1,20 @@
+{
+  "name": "bem-Photokyo",
+  "version": "0.0.0",
+  "authors": [
+    "AnNavara <navarachkou@gmail.com>"
+  ],
+  "description": "no descrption",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "picturefill": "~2.3.1",
+    "ideal-image-slider": "~1.4.0"
+  }
+}

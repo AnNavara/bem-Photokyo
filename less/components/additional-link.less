@@ -4,8 +4,8 @@
 .additional-link{
 	padding-left: 5.2%;
 	padding-right: 5.2%;
-	padding-top: 8%;
-	padding-bottom: 10%;
+	padding-top: 3.5rem;
+	padding-bottom: 5.5rem;
 	border: 1px solid @border-color;
 
 	h1>{
@@ -14,12 +14,13 @@
 		padding: 0;
 		font-family: @font-family--heading;
 		font-size: @font-size--h1;
+		letter-spacing: 0.026em;
 		line-height: @line-height--heading;
 		font-weight: @heading-weight;
-		color: @heading-color;
+		color: @link-color;
 	}
 
 	&:hover>h1{
-		color: darken(@heading-color, 15%);
+		color: link-color--hover;
 	}
 }

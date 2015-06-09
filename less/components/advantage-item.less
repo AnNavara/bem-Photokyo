@@ -2,50 +2,263 @@
 @import "mixins.less";
 
 #advantage-item(){
-	width: 100%;
-	height: 100%;
+	position: relative;
 	display: flex;
-	flex-direction: column-reverse;
+	flex-direction: column;
 	align-items: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #fff;
 
-	>h3{
-		margin: 0;
-		padding: 0;
-		font-family: @font-family--heading;
-		font-size: @font-size--h6;
-		font-weight: @heading-weight;
-		line-height: @line-height--heading;
-		color: @heading-color;
-		text-align: center;
+	&::before{
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	&:hover>h3{
+		opacity: 0;
+		transition: all .3s;
+	}
+
+	&:hover>p{
+		opacity: 1;
+		transition: all .3s;
+	}
+
+	&:hover::after{
+		background-position: 24.8% 7.5rem;
+		background-size: 27.5275%;
+		transition: all .3s;
 	}
 }
 
+#after-advantage(){
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+}
+
+#heading-advantage(){
+	position: absolute;
+	top: 30rem;
+	left: 0;
+	z-index: 10;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-family: @font-family--heading;
+	font-size: @font-size--h6;
+	font-weight: @heading-weight;
+	line-height: @line-height--heading;
+	color: @heading-color;
+	text-align: center;
+}
+
+#advantage-text(){
+	z-index: 10;
+	opacity: 0;
+	margin: 0;
+	margin-top: 23rem;
+	padding: 0;
+	padding-right: 14.6%;
+	padding-left: 18.75%;
+	font-family: @font-family;
+	font-size: @font-size;
+	font-weight: @text-weight;
+	line-height: @line-height;
+	color: @text-color;
+}
+
 .advantage-item{
-	background-color: @color--idea;
 	#advantage-item();
+	// background-color: @bg-color--idea;
+	background-image: @bg-idea;
+
+	&::before{
+		background-color: @bg-color--idea;
+	}
+
+	>h3{
+		#heading-advantage();
+	}
+
+
+	>p{
+		#advantage-text();
+	}
+
+
+	&::after{
+		#after-advantage();
+		background-image: @icon-idea;
+		background-position: center 9rem; //91px
+		background-size: 38.5%; //182px
+	}
 }
 
 .advantage-item--requisit{
-	background-color: @color--requisit;
 	#advantage-item();
+	// background-color: @color--requisit;
+	// background-image: @bg-requsit;
+
+	&::before{
+		background-color: @bg-color--requsit;
+	}
+
+	>h3{
+		#heading-advantage();
+		font-size: @font-size--h3;
+	}
+
+	>p{
+		#advantage-text();
+		margin-top: 10rem;
+		padding-left: 32.29%;
+	}
+
+	&::after{
+		#after-advantage();
+		background-image: @icon-requsit;
+		background-position: center 5.26vw; //101px 21.04%
+		background-size: 29.9%; //287px
+	}
+
+	&:hover::after{
+		background-position: 9.8% 10.5rem;
+		background-size: 18.2%;
+		transition: all .3s;
+	}
 }
 
 .advantage-item--exp{
-	background-color: @color--exp;
 	#advantage-item();
+	// background-color: @color--exp;
+	background-image: @bg-exp;
+
+	&::before{
+		background-color: @bg-color--exp;
+	}
+
+	>h3{
+		#heading-advantage();
+	}
+
+	>p{
+		#advantage-text();
+	}
+
+	&::after{
+		#after-advantage();
+		background-size: 36.25%; //174px
+		background-image: @icon-exp;
+		background-position: center 5.72vw; //110px 22.91%
+	}
+
+	&:hover::after{
+		background-position: inherit 8rem;
+		background-size: 26.04%;
+	}
 }
 
 .advantage-item--participation{
-	background-color: @color--participation;
 	#advantage-item();
+	// background-color: @color--participation;
+	background-image: @bg-participation;
+
+	&::before{
+		background-color: @bg-color--participation;
+	}
+
+	>h3{
+		#heading-advantage;
+		font-size: @font-size--h3;
+	}
+
+	>p{
+		#advantage-text();
+		margin-top: 10rem;
+		padding-left: 32.29%;
+	}
+
+	&::after{
+		#after-advantage();
+		background-image: @icon-participation;
+		background-position: center 5.72vw; //110px 22.91%
+		background-size: 33.02%; //317px
+	}
+
+	&:hover::after{
+		background-position: 10.4166% 10.5rem;
+		background-size: 19.66%;
+		transition: all .3s;
+	}
 }
 
+
 .advantage-item--approach{
-	background-color: @color--approach;
 	#advantage-item();
+	// background-color: @color--approach;
+	background-image: @bg-approach;
+
+	&::before{
+		background-color: @bg-color--approach;
+	}
+
+	>h3{
+		#heading-advantage();
+	}
+
+	>p{
+		#advantage-text();
+	}
+
+	&::after{
+		#after-advantage();
+		background-size: 31.66%; //172px
+		background-image: @icon-approach;
+		background-position: center 4.062vw; //78px 16.25%
+	}
+
+	&:hover::after{
+		background-position: inherit 7rem;
+		background-size: 22%;
+	}
 }
 
 .advantage-item--committal{
-	background-color: @color--committal;
 	#advantage-item();
+	// background-color: @color--committal;
+	background-image: @bg-committal;
+
+	&::before{
+		background-color: @bg-color--committal;
+	}
+
+	>h3{
+		#heading-advantage();
+	}
+
+	>p{
+		#advantage-text();
+	}
+
+	&::after{
+		#after-advantage();
+		background-image: @icon-committal;
+		background-size: 34.8%; //167px
+		background-position: center 5.52vw; //106px 22.083%
+	}
+
+	&:hover::after{
+		background-size: 24.2%;
+	}
 }
