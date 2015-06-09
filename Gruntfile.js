@@ -105,8 +105,8 @@ module.exports = function(grunt) {
 		grunt.registerTask("build", [
 			"less",
 			"autoprefixer",
-			"csscomb",
 			"cmq",
+			"csscomb",
 			"cssmin"
 		]);
 };
