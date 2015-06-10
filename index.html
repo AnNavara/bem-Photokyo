@@ -2,23 +2,34 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="http://fonts.googleapis.com/css?family=Exo+2:400,200,100&subset=latin,cyrillic" rel="stylesheet" type="text/css">
 	<script src="js/vendor/picturefill.min.js" type="text/javascript"></script>
-	<link rel="stylesheet" href="css/style.css">
 	<title>Photokyo</title>
 </head>
 <body>
 	<header class="page-header">
 		<nav class="page-header__nav">
 			<div class="page-header__wrapper">
-				<a href="#" class="dropdown-menu__toogle">☰</a>
+				<a href="#" id="dropdown-menu__toggle" class="dropdown-menu__toggle">☰</a>
+				<ul id="dropdown-menu" class="dropdown-menu__container">
+					<li class="dropdown-menu__item"><a href="">Главная</a></li>
+					<li class="dropdown-menu__item"><a href="">Услуги и цены</a></li>
+					<li class="dropdown-menu__item"><a href="">Портфолио</a></li>
+					<li class="dropdown-menu__item"><a href="">Процесс</a></li>
+					<li class="dropdown-menu__item"><a href="">Отзывы</a></li>
+					<li class="dropdown-menu__item"><a href="">Обо мне</a></li>
+					<li class="dropdown-menu__item"><a href="">Контакты</a></li>
+				</ul>
 				<a href="#" class="page-header__logo"><h1>PHO TO KYO</h1></a>
 			</div>
 				<a href="tel:+79227383321" class="page-header__phone"><h2>+7 922 738-33-21</h2></a>
 		</nav>
+
 		<section class="slider" id="slider">
 			<article id="slider-item-1" class="gallery-item gallery-item--active">
-				<img src="img/gallery.jpg" alt="" width="100%" class="slider__img">
+				<img src="img/gallery.jpg" alt="" class="slider__img">
 				<h1>Заголовок съёмки</h1>
 			</article>
 			<article id="slider-item-2" class="gallery-item">
@@ -175,24 +186,26 @@
 		</a>
 	</section>
 	<section class="contacts">
-		<div class="container">
-			<a href="tel:+79227383321" class="phone-number">
-				<h1>+7 922 738-33-21</h1>
-			</a>
-		</div>
+		<a href="tel:+79227383321" class="phone-number container">
+			<h1>+7 922 738-33-21</h1>
+		</a>
 		<div class="container">
 			<form id="form" action="" class="contact-form">
 				<h2 class="contact-form__heading">Напишите мне</h2>
 				<div class="contact-form__inner">
 					<div class="contact-form__wrapper">
 						<input name="username" type="text" class="contact-form__name" placeholder="Ваше имя" required>
-						<input name="feedback" type="text" class="contact-form__email" placeholder="Ваш телефон (или email)" required>
+						<input name="feedback" type="text" pattern="([a-zA-Zа-яА-ЯёЁ0-9_.+-]+@[а-яА-ЯёЁa-zA-Z0-9-]+\.[а-яА-ЯёЁa-zA-Z0-9-.]+)|[+-.()\d\s]{6,20}" class="contact-form__email" placeholder="Ваш телефон (или email)" title="Ваш телефон (или email)" required>
 					</div>
 					<div class="contact-form__wrapper--right">
 						<textarea name="message" rows="4" class="contact-form__message" placeholder="Ваше сообщение"></textarea>
 						<label for="form-submit"><input id="form-submit" type="submit" value="Отправить" class="contact-form__submit">~</label>
 						</div>
-
+				</div>
+				<div class="form-success">
+					<h2>Ваш запрос отправлен</h2>
+					<p><span>Скоро </span><br>я с вами свяжусь</p>
+					<a href="" class="form-success__close">X</a>
 				</div>
 			</form>
 		</div>
@@ -227,6 +240,8 @@
 			</div>
 		</div>
 	</footer>
+	<script src="js/vendor/tap.min.js" type="text/javascript"></script>
 	<script src="js/ajax.js" type="text/javascript"></script>
+	<script src="js/dropdown.js" type="text/javascript"></script>
 </body>
 </html>

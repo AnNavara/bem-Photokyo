@@ -34,6 +34,7 @@
 }
 
 .contact-form{
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	padding-left: 8.3%;
@@ -41,6 +42,7 @@
 	width: 100%;
 	height: 100%;
 	background-color: @bg--form;
+	overflow: hidden;
 
 	&__inner{
 		display: flex;
@@ -92,6 +94,14 @@
 		#form-field();
 		margin-right: 6.25%;
 		width: 100%;//39.5%
+
+		&:invalid{
+			box-shadow: none;
+			outline: none;
+			color: @red;
+			background-color: @red--lighten;
+			border-color: @red;
+		}
 	}
 
 	&__message{
@@ -106,7 +116,7 @@
 	&__submit{
 		#form-field();
 		padding-left: 2.75%;
-		padding-right: 9.5%;
+		padding-right: 25.55%;
 		width: 100%;
 		color: @link-color;
 		background-color: @bg--submit;
@@ -128,14 +138,81 @@
 	& label::after{
 		position: absolute;
 		content: "";
-		top: 68.7%;
-		right: 4.8%;
+		top: 69.6%;
+		right: 5.7%;
 		width: 2.4rem;
 		height: 2.4rem;
 		background-image: @icon-submit;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		background-position: center;
 	}
 
 	& label:active::after{
 		transform: translateY(.2rem) scale(.9);
+	}
+}
+
+.form-success{
+	position: absolute;
+	right: -100%;
+	top: 0;
+	padding-left: 8.3%;
+	padding-right: 8.3%;
+	width: 100%;
+	height: 100%;
+	background-color: @bg--form;
+	transition: right .6s;
+
+	&--active{
+		right: 0;
+		transition: right .6s;
+	}
+
+	&__close{
+		position: absolute;
+		top: 3.55vw;
+		right: 3.85vw;
+		width: 2.4vw;
+		height: 2.4vw;
+		font-size: 0;
+
+		&::before{
+			position: absolute;
+			content: "";
+			top: 0;
+			left: 0;
+			height: 100%;
+			border-left: 1px solid @white;
+			transform: skewX(45deg) translateX(1.2vw);
+		}
+
+		&::after{
+			position: absolute;
+			content: "";
+			top: 0;
+			right: 0;
+			height: 100%;
+			border-right: 1px solid @white;
+			transform: skewX(-45deg) translateX(-1.2vw);
+		}
+	}
+
+	&>h2{
+		#header();
+		margin-top: 2.34vw;
+		margin-bottom: 4.3875vw;
+		font-size: @font-size--h4;
+		text-align: left;
+	}
+
+	&>p{
+		#text();
+		font-size: @font-size--h4;
+
+		>span{
+			font-size: @font-size--super;
+			line-height: 1;
+		}
 	}
 }

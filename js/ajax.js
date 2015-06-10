@@ -1,8 +1,12 @@
 (function() {
 	var form = document.getElementById("form");
+	var success = form.querySelector(".form-success");
+	var close = form.querySelector(".form-success__close");
 
 	form.addEventListener("submit", function(event) {
 		event.preventDefault();
+
+		success.classList.add("form-success--active");
 
 		var elements = form.querySelectorAll(".contact-form input[type=text], .contact-form textarea");
 		var data = "";
@@ -20,6 +24,19 @@
 			console.log(response);
 		});
 
+
+
+	});
+
+	close.addEventListener("tap", function(event) {
+		event.preventDefault();
+		success.classList.remove("form-success--active");
+	});
+
+	window.addEventListener("keydown", function(event) {
+			if (event.keyCode == 27 && success.classList.contains("form-success--active")) {
+					success.classList.remove("form-success--active");
+			}
 	});
 
 	function request(data, fn) {
@@ -33,7 +50,6 @@
 				}
 		});
 
-	console.log(data);
 	xhr.send(data);
 	}
 

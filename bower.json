@@ -16,5 +16,10 @@
   "dependencies": {
     "picturefill": "~2.3.1",
     "ideal-image-slider": "~1.4.0"
+  },
+  "devDependencies": {
+    "jquery": "~2.1.4",
+    "jquery-ui": "~1.11.4",
+    "tap": "~1.0.6"
   }
 }
