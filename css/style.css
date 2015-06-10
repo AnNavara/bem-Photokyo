@@ -1266,7 +1266,7 @@ img{
 }
 
 .advantage-item--requisit:not(:hover)::after{
-  background-position: center 5.26vw;
+  background-position: center 9rem;
   background-size: 29.9%;
   transition: all .3s;
 }
@@ -1373,7 +1373,7 @@ img{
 }
 
 .advantage-item--exp:not(:hover)::after{
-  background-position: center 5.72vw;
+  background-position: center 9rem;
   background-size: 36.25%;
   transition: all .3s;
 }
@@ -1485,7 +1485,7 @@ img{
 }
 
 .advantage-item--participation:not(:hover)::after{
-  background-position: center 5.72vw;
+  background-position: center 9rem;
   background-size: 33.02%;
   transition: all .3s;
 }
@@ -1592,7 +1592,7 @@ img{
 }
 
 .advantage-item--approach:not(:hover)::after{
-  background-position: center 4.062vw;
+  background-position: center 9rem;
   background-size: 31.66%;
   transition: all .3s;
 }
@@ -1698,7 +1698,7 @@ img{
 }
 
 .advantage-item--committal:not(:hover)::after{
-  background-position: center 5.52vw;
+  background-position: center 9rem;
   background-size: 34.8%;
   transition: all .3s;
 }
@@ -2075,6 +2075,7 @@ img{
 }
 
 .social-links{
+  position: relative;
   width: 100%;
   height: 100%;
   display: -webkit-flex;
@@ -2083,25 +2084,75 @@ img{
   -webkit-flex-direction: column-reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+          align-items: flex-start;
   background-image: url("../img/icon-social-vk.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 53%;
+  overflow: hidden;
   background-color: #4c75a3;
 }
 
 .social-links>h3{
   margin: 0;
+  margin-left: 10.4%;
+  margin-bottom: 10.4%;
   padding: 0;
-  padding-left: 10.4%;
-  padding-bottom: 10.4%;
   font-family: "Exo 2", Helvetica, Arial, sans-serif;
   font-size: 4.2rem;
   line-height: 1.2;
   font-weight: 100;
 }
 
+.social-links:hover>h3{
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.social-links:not(:hover)>h3{
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.social-links>h2{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  margin-left: 8.4%;
+  margin-bottom: 5.4%;
+  padding-left: .7em;
+  padding-right: .7em;
+  padding-top: .25em;
+  padding-bottom: .3em;
+  font-family: "Exo 2", Helvetica, Arial, sans-serif;
+  font-size: 4.2rem;
+  line-height: 1.2;
+  font-weight: 100;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .4);
+  -webkit-transform: translateY(170%) scale(.1);
+          transform: translateY(170%) scale(.1);
+}
+
+.social-links:hover>h2{
+  -webkit-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
+  transition: -webkit-transform .3s ease-out;
+  transition:         transform .3s ease-out;
+}
+
+.social-links:not(:hover)>h2{
+  -webkit-transform: translateY(170%) scale(.1);
+          transform: translateY(170%) scale(.1);
+  transition: -webkit-transform .3s;
+  transition:         transform .3s;
+}
+
 .social-links--instagram{
+  position: relative;
   width: 100%;
   height: 100%;
   display: -webkit-flex;
@@ -2110,10 +2161,14 @@ img{
   -webkit-flex-direction: column-reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+          align-items: flex-start;
   background-image: url("../img/icon-social-vk.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 53%;
+  overflow: hidden;
   background-color: #2e5e86;
   background-image: url("../img/icon-social-inst.svg");
   background-size: 38.75%;
@@ -2121,16 +2176,62 @@ img{
 
 .social-links--instagram>h3{
   margin: 0;
+  margin-left: 10.4%;
+  margin-bottom: 10.4%;
   padding: 0;
-  padding-left: 10.4%;
-  padding-bottom: 10.4%;
   font-family: "Exo 2", Helvetica, Arial, sans-serif;
   font-size: 4.2rem;
   line-height: 1.2;
   font-weight: 100;
 }
 
+.social-links--instagram:hover>h3{
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.social-links--instagram:not(:hover)>h3{
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.social-links--instagram>h2{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  margin-left: 8.4%;
+  margin-bottom: 5.4%;
+  padding-left: .7em;
+  padding-right: .7em;
+  padding-top: .25em;
+  padding-bottom: .3em;
+  font-family: "Exo 2", Helvetica, Arial, sans-serif;
+  font-size: 4.2rem;
+  line-height: 1.2;
+  font-weight: 100;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .4);
+  -webkit-transform: translateY(170%) scale(.1);
+          transform: translateY(170%) scale(.1);
+}
+
+.social-links--instagram:hover>h2{
+  -webkit-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
+  transition: -webkit-transform .3s ease-out;
+  transition:         transform .3s ease-out;
+}
+
+.social-links--instagram:not(:hover)>h2{
+  -webkit-transform: translateY(170%) scale(.1);
+          transform: translateY(170%) scale(.1);
+  transition: -webkit-transform .3s;
+  transition:         transform .3s;
+}
+
 .social-links--fb{
+  position: relative;
   width: 100%;
   height: 100%;
   display: -webkit-flex;
@@ -2139,10 +2240,14 @@ img{
   -webkit-flex-direction: column-reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+          align-items: flex-start;
   background-image: url("../img/icon-social-vk.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 53%;
+  overflow: hidden;
   background-color: #4a6ea9;
   background-image: url("../img/icon-social-fb.svg");
   background-size: 21.25%;
@@ -2150,16 +2255,62 @@ img{
 
 .social-links--fb>h3{
   margin: 0;
+  margin-left: 10.4%;
+  margin-bottom: 10.4%;
   padding: 0;
-  padding-left: 10.4%;
-  padding-bottom: 10.4%;
   font-family: "Exo 2", Helvetica, Arial, sans-serif;
   font-size: 4.2rem;
   line-height: 1.2;
   font-weight: 100;
 }
 
+.social-links--fb:hover>h3{
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.social-links--fb:not(:hover)>h3{
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.social-links--fb>h2{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  margin-left: 8.4%;
+  margin-bottom: 5.4%;
+  padding-left: .7em;
+  padding-right: .7em;
+  padding-top: .25em;
+  padding-bottom: .3em;
+  font-family: "Exo 2", Helvetica, Arial, sans-serif;
+  font-size: 4.2rem;
+  line-height: 1.2;
+  font-weight: 100;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .4);
+  -webkit-transform: translateY(170%) scale(.1);
+          transform: translateY(170%) scale(.1);
+}
+
+.social-links--fb:hover>h2{
+  -webkit-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
+  transition: -webkit-transform .3s ease-out;
+  transition:         transform .3s ease-out;
+}
+
+.social-links--fb:not(:hover)>h2{
+  -webkit-transform: translateY(170%) scale(.1);
+          transform: translateY(170%) scale(.1);
+  transition: -webkit-transform .3s;
+  transition:         transform .3s;
+}
+
 .social-links--twitter{
+  position: relative;
   width: 100%;
   height: 100%;
   display: -webkit-flex;
@@ -2168,10 +2319,14 @@ img{
   -webkit-flex-direction: column-reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+          align-items: flex-start;
   background-image: url("../img/icon-social-vk.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 53%;
+  overflow: hidden;
   background-color: #5ea9dd;
   background-image: url("../img/icon-social-twitter.svg");
   background-size: 43.54%;
@@ -2179,13 +2334,58 @@ img{
 
 .social-links--twitter>h3{
   margin: 0;
+  margin-left: 10.4%;
+  margin-bottom: 10.4%;
   padding: 0;
-  padding-left: 10.4%;
-  padding-bottom: 10.4%;
   font-family: "Exo 2", Helvetica, Arial, sans-serif;
   font-size: 4.2rem;
   line-height: 1.2;
   font-weight: 100;
+}
+
+.social-links--twitter:hover>h3{
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.social-links--twitter:not(:hover)>h3{
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.social-links--twitter>h2{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  margin-left: 8.4%;
+  margin-bottom: 5.4%;
+  padding-left: .7em;
+  padding-right: .7em;
+  padding-top: .25em;
+  padding-bottom: .3em;
+  font-family: "Exo 2", Helvetica, Arial, sans-serif;
+  font-size: 4.2rem;
+  line-height: 1.2;
+  font-weight: 100;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .4);
+  -webkit-transform: translateY(170%) scale(.1);
+          transform: translateY(170%) scale(.1);
+}
+
+.social-links--twitter:hover>h2{
+  -webkit-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
+  transition: -webkit-transform .3s ease-out;
+  transition:         transform .3s ease-out;
+}
+
+.social-links--twitter:not(:hover)>h2{
+  -webkit-transform: translateY(170%) scale(.1);
+          transform: translateY(170%) scale(.1);
+  transition: -webkit-transform .3s;
+  transition:         transform .3s;
 }
 
 .phone-number{
