@@ -19,3 +19,21 @@
 	#container();
 	width: 100%;
 }
+
+@media (max-width: 768px), (max-resolution: 1.5dppx) {
+
+	.container{
+		width: 100%;
+		height: ceil(@container-height*2);
+	}
+
+	.container--s{
+		width: 50%;
+		height: ceil(@container-height*2);
+	}
+
+	.container--l{
+		width: 100%;
+		height: ceil(@container-height*2);
+	}
+}
