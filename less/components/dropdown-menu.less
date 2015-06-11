@@ -54,3 +54,21 @@
 		border: none;
 	}
 }
+
+@media (max-aspect-ratio: 9/10), (max-width: 480px)  and (min-resolution: 1.5dppx) {
+
+	.dropdown-menu{
+
+		&__toggle{
+			font-size: round((@font-size--h4 * 1.62), 1);;
+		}
+
+		&__item{
+			padding: 7% 0 8% 0;
+
+			&>a{
+				font-size: round((@font-size--larger * 1.62), 1);
+			}
+		}
+	}
+}
