@@ -38,7 +38,7 @@
 	padding-top: .25em;
 	padding-bottom: .3em;
 	font-family: @font-family--heading;
-	font-size: @font-size--h6;
+	font-size: @font-size--large;
 	line-height: @line-height--heading;
 	font-weight: @heading-weight;
 	color: @heading-color;
@@ -182,5 +182,51 @@
 	&:not(:hover)>h2{
 		transform: translateY(170%) scale(.1);
 		transition: transform .3s;
+	}
+}
+
+@media (max-aspect-ratio: 2/3), (max-width: 480px)  and (min-resolution: 1.5dppx) {
+
+	.social-links{
+
+		>h3{
+			font-size: (@font-size--h6 * 1.66);
+		}
+
+		>h2{
+			font-size: (@font-size--large * 1.66);
+		}
+	}
+
+	.social-links--instagram{
+
+		>h3{
+			font-size: (@font-size--h6 * 1.66);
+		}
+
+		>h2{
+			font-size: (@font-size--large * 1.66);
+		}
+	}
+
+	.social-links--fb{
+
+		>h3{
+			font-size: (@font-size--h6 * 1.66);
+		}
+
+		>h2{
+			font-size: (@font-size--large * 1.66);
+		}
+	}
+
+	.social-links--twitter{
+
+		>h3{
+			font-size: (@font-size--h6 * 1.66);
+		}
+		>h2{
+			font-size: (@font-size--large * 1.66);
+		}
 	}
 }

@@ -18,7 +18,7 @@
 	&:not(:hover)>.photo-item__watch{
 		transition-duration: .3s;
 		transition-timing-function: ease-out;
-		transform: translateY(5.2vw);
+		transform: translateY(200%);
 	}
 
 	&:hover>.photo-item__header{
@@ -54,9 +54,9 @@
 	&__header{
 		position: absolute;
 		z-index: 10;
-		bottom: 1.54vw;
+		bottom: 8%;
 		margin: 0;
-		margin-left: 1.54vw;
+		margin-left: 10.4%;
 		padding: 0;
 		// margin-bottom: .5vw;
 		font-family: @font-family--heading;
@@ -74,7 +74,7 @@
 		z-index: 10;
 		top: 84.79%;
 		margin: 0;
-		margin-left: 1.54vw;
+		margin-left: 10.4%;
 		padding: 0;
 		padding-left: 1em;
 		padding-right: 1em;
@@ -85,7 +85,7 @@
 		line-height: @line-height--heading;
 		color: @heading-color;
 		border: 1px solid @border-color--transparent;
-		transform: translateY(5.2vw);
+		transform: translateY(200%);
 	}
 
 	&__img{
@@ -120,4 +120,17 @@
 .photo-item--lovestory{
 	#photo-item();
 	background-color: @color--love-story;
+}
+
+@media (max-aspect-ratio: 2/3), (max-width: 480px) and (min-resolution: 1.5dppx){
+	.photo-item{
+
+		&__header{
+			font-size: (@font-size--h6 * 2);
+		}
+
+		&__watch{
+			font-size: (@font-size--small * 2);
+		}
+	}
 }

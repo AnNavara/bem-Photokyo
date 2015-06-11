@@ -20,4 +20,34 @@
 		justify-content: space-between;
 		flex-wrap: wrap;
 	}
+
+	&__descr{
+		margin: 0;
+		margin-bottom: 2rem;
+		padding: 0;
+		font-family: @font-family;
+		font-size: @font-size;
+		line-height: @line-height;
+		font-weight: @text-weight;
+		color: @text-color;
+	}
+}
+
+.copyright-text{
+	#text();
+	font-size: @font-size;
+}
+
+@media (max-aspect-ratio: 2/3), (max-width: 480px)  and (min-resolution: 1.5dppx) {
+
+	.page-footer{
+
+		&__descr{
+			font-size: (@font-size * 1.66);
+		}
+	}
+
+	.copyright-text{
+		font-size: (@font-size * 1.66);
+	}
 }

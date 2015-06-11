@@ -53,7 +53,7 @@
 
 #heading-advantage(){
 	position: absolute;
-	bottom: 3.4vw;
+	bottom: 18.8%;
 	left: 0;
 	z-index: 10;
 	margin: 0;
@@ -71,7 +71,7 @@
 	z-index: 10;
 	opacity: 0;
 	margin: 0;
-	margin-top: 11.98vw;
+	margin-top: 45%;
 	padding: 0;
 	padding-right: 14.6%;
 	padding-left: 18.75%;
@@ -127,7 +127,7 @@
 
 	>h3{
 		#heading-advantage();
-		bottom: 5.5vw;
+		bottom: 21.975%;
 		font-size: @font-size--h3;
 	}
 
@@ -204,7 +204,7 @@
 
 	>h3{
 		#heading-advantage;
-		bottom: 5.5vw;
+		bottom: 21.975%;
 		font-size: @font-size--h3;
 	}
 
@@ -306,29 +306,65 @@
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-aspect-ratio: 2/3), (max-width: 480px) and (min-resolution: 1.5dppx) {
 
 	.advantage-item{
 		order: 2;
+		>h3{
+			font-size: (@font-size--h6 * 2);
+		}
+		>p{
+			font-size: (@font-size * 1.66);
+		}
 	}
 
 	.advantage-item--requisit{
 		order: 1;
+		>h3{
+			font-size: (@font-size--h3 * 2);
+		}
+		>p{
+			font-size: (@font-size * 2);
+		}
 	}
 
 	.advantage-item--exp{
 		order: 3;
+		>h3{
+			font-size: (@font-size--h6 * 2);
+		}
+		>p{
+			font-size: (@font-size * 1.66);
+		}
 	}
 
 	.advantage-item--participation{
 		order: 4;
+		>h3{
+			font-size: (@font-size--h3 * 2);
+		}
+		>p{
+			font-size: (@font-size * 2);
+		}
 	}
 
 	.advantage-item--approach{
 		order: 5;
+		>h3{
+			font-size: (@font-size--h6 * 2);
+		}
+		>p{
+			font-size: (@font-size * 1.66);
+		}
 	}
 
 	.advantage-item--committal{
 		order: 6;
+		>h3{
+			font-size: (@font-size--h6 * 2);
+		}
+		>p{
+			font-size: (@font-size * 1.66);
+		}
 	}
 }

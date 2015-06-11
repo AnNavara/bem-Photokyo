@@ -225,26 +225,25 @@
 		<a href="tel:+79227383321" class="phone-number container">
 			<h1>+7 922 738-33-21</h1>
 		</a>
-		<div class="container">
-			<form id="form" action="" class="contact-form">
-				<h2 class="contact-form__heading">Напишите мне</h2>
-				<div class="contact-form__inner">
-					<div class="contact-form__wrapper">
-						<input name="username" type="text" class="contact-form__name" placeholder="Ваше имя" required>
-						<input name="feedback" type="text" pattern="([a-zA-Zа-яА-ЯёЁ0-9_.+-]+@[а-яА-ЯёЁa-zA-Z0-9-]+\.[а-яА-ЯёЁa-zA-Z0-9-.]+)|[+-.()\d\s]{6,20}" class="contact-form__email" placeholder="Ваш телефон (или email)" title="Ваш телефон (или email)" required>
-					</div>
-					<div class="contact-form__wrapper--right">
-						<textarea name="message" rows="4" class="contact-form__message" placeholder="Ваше сообщение"></textarea>
-						<label for="form-submit"><input id="form-submit" type="submit" value="Отправить" class="contact-form__submit">~</label>
-						</div>
+		<form id="form" action="" class="contact-form container">
+			<h2 class="contact-form__heading">Напишите мне</h2>
+			<div class="contact-form__inner">
+				<div class="contact-form__wrapper">
+					<input name="username" type="text" class="contact-form__name" placeholder="Ваше имя" required>
+					<input name="feedback" type="text" pattern="([a-zA-Zа-яА-ЯёЁ0-9_.+-]+@[а-яА-ЯёЁa-zA-Z0-9-]+\.[а-яА-ЯёЁa-zA-Z0-9-.]+)|[+-.()\d\s]{6,20}" class="contact-form__email" placeholder="Ваш телефон (или email)" title="Ваш телефон (или email)" required>
 				</div>
-				<div class="form-success">
-					<h2>Ваш запрос отправлен</h2>
-					<p><span>Скоро </span><br>я с вами свяжусь</p>
-					<a href="" class="form-success__close">X</a>
- 				</div>
-			</form>
-		</div>
+				<div class="contact-form__wrapper--right">
+					<textarea name="message" rows="4" class="contact-form__message" placeholder="Ваше сообщение"></textarea>
+					<label for="form-submit"><input id="form-submit" type="submit" value="Отправить" class="contact-form__submit">~</label>
+				</div>
+
+			</div>
+			<div class="form-success">
+				<h2>Ваш запрос отправлен</h2>
+				<p><span>Скоро </span><br>я с вами свяжусь</p>
+				<a href="" class="form-success__close">X</a>
+ 			</div>
+		</form>
 		<div class="container--s">
 			<a href="#" class="social-links">
 				<h3>Вконтакте</h3>

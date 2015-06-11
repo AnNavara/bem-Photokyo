@@ -19,3 +19,12 @@
 		color: lighten(@blue, 15%);
 	}
 }
+
+@media (max-aspect-ratio: 2/3), (max-width: 480px) and (min-resolution: 1.5dppx){
+	.phone-number{
+
+		&>h1{
+			font-size: (@font-size--h2 * 1.5);
+		}
+	}
+}
