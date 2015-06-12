@@ -363,8 +363,63 @@ img{
 }
 
 .dropdown-menu__toggle{
-  font-size: 5.4rem;
+  position: relative;
+  font-size: 0;
+  margin-top: 1.6vmin;
+  width: 5.4rem;
+  height: 5.4rem;
   z-index: 100;
+  outline: none;
+}
+
+.dropdown-menu__toggle::before{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/icon-sand-witch.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: opacity .3s ease, -webkit-transform .3s ease;
+  transition: opacity .3s ease, transform .3s ease;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+.dropdown-menu__toggle::after{
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/icon-close.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: opacity .3s ease, -webkit-transform .3s ease;
+  transition: opacity .3s ease, transform .3s ease;
+  -webkit-transform: scale(.6);
+          transform: scale(.6);
+  opacity: 0;
+}
+
+.dropdown-menu__toggle--active::before{
+  transition: opacity .3s ease, -webkit-transform .3s ease;
+  transition: opacity .3s ease, transform .3s ease;
+  -webkit-transform: scale(.6);
+          transform: scale(.6);
+  opacity: 0;
+}
+
+.dropdown-menu__toggle--active::after{
+  transition: opacity .3s ease, -webkit-transform .3s ease;
+  transition: opacity .3s ease, transform .3s ease;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
 }
 
 .dropdown-menu__container{
@@ -1135,7 +1190,7 @@ img{
   background-size: 38.5%;
 }
 
-:not(:hover)::after{
+.advantage-item:not(:hover)::after{
   background-position: center 9rem;
   background-size: 38.5%;
   transition: all .3s;
@@ -2689,7 +2744,18 @@ img{
   }
 
   .dropdown-menu__toggle{
-    font-size: 8.7rem;
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .dropdown-menu__toggle::before{
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .dropdown-menu__toggle::after{
+    width: 8rem;
+    height: 8rem;
   }
 
   .dropdown-menu__item{

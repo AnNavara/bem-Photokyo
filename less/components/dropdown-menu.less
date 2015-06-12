@@ -5,8 +5,58 @@
 .dropdown-menu{
 
 	&__toggle{
-		font-size: @font-size--h4;
+		position: relative;
+		font-size: 0;
+		margin-top: 1.6vmin;
+		width: 5.4rem;
+		height: 5.4rem;
 		z-index: 100;
+		outline: none;
+
+		&::before{
+			position: absolute;
+			content: "";
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: @icon-sand-witch;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			transition: opacity .3s ease, transform .3s ease;
+			transform: scale(1);
+			opacity: 1;
+		}
+
+		&::after{
+			position: absolute;
+			content: "";
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background-image: @icon-close;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			transition: opacity .3s ease, transform .3s ease;
+			transform: scale(.6);
+			opacity: 0;
+		}
+	}
+
+	&__toggle--active{
+
+		&::before{
+			transition: opacity .3s ease, transform .3s ease;
+			transform: scale(.6);
+			opacity: 0;
+		}
+
+		&::after{
+			transition: opacity .3s ease, transform .3s ease;
+			transform: scale(1);
+			opacity: 1;
+		}
 	}
 
 	&__container{
@@ -60,7 +110,18 @@
 	.dropdown-menu{
 
 		&__toggle{
-			font-size: round((@font-size--h4 * 1.62), 1);;
+			width: 8rem;
+			height: 8rem;
+
+			&::before{
+				width: 8rem;
+				height: 8rem;
+			}
+
+			&::after{
+				width: 8rem;
+				height: 8rem;
+			}
 		}
 
 		&__item{
