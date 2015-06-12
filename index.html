@@ -28,7 +28,7 @@
 		</nav>
 
 		<section class="slider" id="slider">
-			<article id="slider-item-1" class="gallery-item gallery-item--active">
+			<article id="slider-item-1" class="gallery-item">
 				<picture>
 					<source type="image/webp"
 									media="(min-aspect-ratio: 3/2)"
@@ -50,7 +50,7 @@
 				</picture>
 				<h1>Заголовок съёмки</h1>
 			</article>
-			<article id="slider-item-2" class="gallery-item">
+			<article id="slider-item-2" class="gallery-item gallery-item--inactive">
 				<picture>
 					<source type="image/webp"
 									media="(min-aspect-ratio: 3/2)"
@@ -72,18 +72,18 @@
 				</picture>
 				<h1>Заголовок съёмки</h1>
 			</article>
-			<article id="slider-item-3" class="gallery-item">
+			<article id="slider-item-3" class="gallery-item gallery-item--inactive">
 				<img src="img/gallery-2.jpg" alt="" width="100%" class="slider__img">
 				<h1>Заголовок съёмки</h1>
 			</article>
-			<article id="slider-item-4" class="gallery-item">
+			<article id="slider-item-4" class="gallery-item gallery-item--inactive">
 				<img src="img/gallery-3.jpg" alt="" width="100%" class="slider__img">
 				<h1>Заголовок съёмки</h1>
 			</article>
 			<nav class="slider__nav">
-				<a href="#" class="slider__btn" id="slider-left">&lt;</a>
+				<div class="slider__btn" id="slider-left">&lt;</div>
 				<span class="slider__counter">3 / 15</span>
-				<a href="#" class="slider__btn--right" id="slider-right">&gt;</a>
+				<div class="slider__btn--right" id="slider-right">&gt;</div>
 			</nav>
 		</section>
 	</header>
@@ -281,7 +281,7 @@
 	</footer>
 	<script src="js/vendor/tap.min.js" type="text/javascript"></script>
 	<script src="js/ajax.js" type="text/javascript"></script>
-	<script src="js/dropdown.js" type="text/javascript">
-	</script>
+	<script src="js/dropdown.js" type="text/javascript"></script>
+	<script src="js/slide.js" type="text/javascript"></script>
 </body>
 </html>

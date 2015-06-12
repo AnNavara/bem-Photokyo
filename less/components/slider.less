@@ -10,6 +10,7 @@
 	line-height: @line-height;
 	font-weight: @text-weight;
 	color: @link-color;
+	cursor: pointer;
 }
 
 #btn-slider-after(){
@@ -30,9 +31,10 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	opacity: 0;
-	z-index: 0;
+	opacity: 1;
+	z-index: 10;
 	overflow: hidden;
+	will-change: left;
 
 	>h1{
 		position: absolute;
@@ -45,29 +47,14 @@
 	}
 }
 
-.gallery-item--show{
-	transform: translateX(100%);
-	transition-duration: .5s;
-	transition-property: all;
-	transition-timing-function: ease;
-}
-
-.gallery-item--hide{
-	transform: translateX(-100%);
-	transition-duration: .5s;
-	transition-property: all;
-	transition-timing-function: ease;
-}
-
-.gallery-item--active{
-	display: block;
-	opacity: 1;
-	z-index: 10;
+.gallery-item--inactive{
+	display: none;
 }
 
 .slider{
 	width: 100%;
-	height: 100vh;//54.6vw
+	height: 100vh;
+	overflow: hidden;
 
 	&__img{
 		margin: 0 auto;
@@ -121,5 +108,34 @@
 		line-height: @line-height;
 		font-weight: @text-weight;
 		color: @link-color;
+	}
+}
+
+@media (max-aspect-ratio: 9/10), (max-width: 480px)  and (min-resolution: 1.5dppx) {
+
+	.slider{
+
+		&__counter{
+
+			font-size: round( (@font-size--medium * 1.66), 1);;
+		}
+
+		&__btn{
+
+			&::after{
+				top: 1.4vw;
+				width: 2.25rem;
+				height: 2.25rem;
+			}
+		}
+
+		&__btn--right{
+
+			&::after{
+				top: 1.4vw;
+				width: 2.25rem;
+				height: 2.25rem;
+			}
+		}
 	}
 }
