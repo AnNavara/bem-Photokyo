@@ -91,7 +91,6 @@
 			}
 		};
 	})();
-
 	document.querySelector(".slider__counter").innerHTML = 1 + " " + "/" + " " + document.querySelectorAll(".gallery-item").length;
 
 	var prevArrow = document.getElementById("slider-left");

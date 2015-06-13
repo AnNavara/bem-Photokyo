@@ -36,7 +36,7 @@
 	overflow: hidden;
 	will-change: left;
 
-	>h1{
+	&__header{
 		position: absolute;
 		display: block;
 		width: 100%;
@@ -44,6 +44,10 @@
 		bottom: 8.4vw;
 		#header();
 		font-size: @font-size--h1;
+	}
+
+	&__header:hover{
+		color: @link-color--hover;
 	}
 }
 
