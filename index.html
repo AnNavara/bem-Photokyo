@@ -2,8 +2,8 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
 	<link href="http://fonts.googleapis.com/css?family=Exo+2:400,200,100&subset=latin,cyrillic" rel="stylesheet" type="text/css">
 	<script src="js/vendor/picturefill.min.js" type="text/javascript"></script>
 	<title>Photokyo</title>
@@ -26,7 +26,6 @@
 			</div>
 				<a href="tel:+79227383321" class="page-header__phone"><h2>+7 922 738-33-21</h2></a>
 		</nav>
-
 		<section class="slider" id="slider">
 			<article id="slider-item-1" class="gallery-item">
 				<picture>
@@ -50,7 +49,7 @@
 				</picture>
 				<a href="#"><h1 class="gallery-item__header">Заголовок съёмки 1</h1></a>
 			</article>
-			<article id="slider-item-2" class="gallery-item gallery-item--inactive">
+			<article id="slider-item-2" class="gallery-item">
 				<picture>
 					<source type="image/webp"
 									media="(min-aspect-ratio: 3/2)"
@@ -72,20 +71,20 @@
 				</picture>
 				<a href="#"><h1 class="gallery-item__header">Заголовок съёмки 2</h1></a>
 			</article>
-			<article id="slider-item-3" class="gallery-item gallery-item--inactive">
+			<article id="slider-item-3" class="gallery-item">
 				<img src="img/gallery-2.jpg" alt="" width="100%" class="slider__img">
 				<a href="#"><h1 class="gallery-item__header">Заголовок съёмки 3</h1></a>
 			</article>
-			<article id="slider-item-4" class="gallery-item gallery-item--inactive">
+			<article id="slider-item-4" class="gallery-item">
 				<img src="img/gallery-3.jpg" alt="" width="100%" class="slider__img">
 				<a href="#"><h1 class="gallery-item__header">Заголовок съёмки 4</h1></a>
 			</article>
-			<nav class="slider__nav">
-				<div class="slider__btn" id="slider-left">&lt;</div>
-				<span class="slider__counter">3 / 15</span>
-				<div class="slider__btn--right" id="slider-right">&gt;</div>
-			</nav>
 		</section>
+		<nav class="slider__nav">
+			<div class="slider__btn" id="slider-left">&lt;</div>
+			<span class="slider__counter">3 / 15</span>
+			<div class="slider__btn--right" id="slider-right">&gt;</div>
+		</nav>
 	</header>
 	<section class="photo-types">
 		<div class="container">
@@ -279,8 +278,10 @@
 		</div>
 	</footer>
 	<script src="js/vendor/tap.min.js" type="text/javascript"></script>
+	<script src="js/vendor/jquery.min.js" type="text/javascript"></script>
+	<script src="js/vendor/slick.min.js" type="text/javascript"></script>
 	<script src="js/ajax.js" type="text/javascript"></script>
 	<script src="js/dropdown.js" type="text/javascript"></script>
-	<script src="js/slide.js" type="text/javascript"></script>
+	<script src="js/slider.js" type="text/javascript"></script>
 </body>
 </html>
