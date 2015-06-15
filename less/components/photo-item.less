@@ -3,8 +3,6 @@
 
 #photo-item(){
 	position: relative;
-	width: 100%;
-	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
@@ -18,7 +16,7 @@
 	&:not(:hover)>.photo-item__watch{
 		transition-duration: .3s;
 		transition-timing-function: ease-out;
-		transform: translateY(200%);
+		transform: translateY(250%);
 	}
 
 	&:hover>.photo-item__header{
@@ -54,9 +52,9 @@
 	&__header{
 		position: absolute;
 		z-index: 10;
-		bottom: 8%;
+		bottom: 7%;
 		margin: 0;
-		margin-left: 10.4%;
+		margin-left: 5rem;
 		padding: 0;
 		// margin-bottom: .5vw;
 		font-family: @font-family--heading;
@@ -74,7 +72,7 @@
 		z-index: 10;
 		top: 84.79%;
 		margin: 0;
-		margin-left: 10.4%;
+		margin-left: 5rem;
 		padding: 0;
 		padding-left: 1em;
 		padding-right: 1em;
@@ -85,7 +83,7 @@
 		line-height: @line-height--heading;
 		color: @heading-color;
 		border: 1px solid @border-color--transparent;
-		transform: translateY(200%);
+		transform: translateY(250%);
 	}
 
 	&__img{
@@ -93,8 +91,6 @@
 		min-width: 100%;
 		height: auto;
 	}
-
-
 }
 
 .photo-item--men{
@@ -126,10 +122,12 @@
 	.photo-item{
 
 		&__header{
+			margin-left: 7rem;
 			font-size: (@font-size--h6 * 2);
 		}
 
 		&__watch{
+			margin-left: 7rem;
 			font-size: (@font-size--small * 2);
 		}
 	}

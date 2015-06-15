@@ -48,11 +48,11 @@ module.exports = function(grunt) {
 		imagemin: {
 			images: {
 				options: {
-					optimizationLevel: 5
+					optimizationLevel: 3
 				},
 				files: [{
 					expand: true,
-					src: ["img/**/*.{png,jpg,gif}"]
+					src: ["img/**/*.{jpg, png, svg}"]
 				}]
 			}
 		},
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
 					report: "gzip"
 				},
 				files: {
-					"css/style-min.css": ["css/style.css"]
+					"css/style.min.css": ["css/style.css"]
 				}
 			}
 		},
