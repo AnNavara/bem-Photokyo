@@ -11,7 +11,16 @@
 	<header class="page-header">
 		<nav class="page-header__nav--alt">
 			<div class="page-header__wrapper">
-				<a href="#" class="dropdown-menu__toogle">☰</a>
+				<a href="#" id="dropdown-menu__toggle" class="dropdown-menu__toggle">☰</a>
+				<ul id="dropdown-menu" class="dropdown-menu__container">
+					<li class="dropdown-menu__item"><a href="">Главная</a></li>
+					<li class="dropdown-menu__item"><a href="">Услуги и цены</a></li>
+					<li class="dropdown-menu__item"><a href="">Портфолио</a></li>
+					<li class="dropdown-menu__item"><a href="altpage.html">Процесс</a></li>
+					<li class="dropdown-menu__item"><a href="">Отзывы</a></li>
+					<li class="dropdown-menu__item"><a href="">Обо мне</a></li>
+					<li class="dropdown-menu__item"><a href="">Контакты</a></li>
+				</ul>
 				<a href="#" class="page-header__logo"><h1>PHO TO KYO</h1></a>
 			</div>
 				<a href="tel:+79227383321" class="page-header__phone"><h2>+7 922 738-33-21</h2></a>
@@ -45,47 +54,43 @@
 		<img src="#" alt="" class="photo-content__img">
 	</section>
 	<section class="contacts">
-		<div class="container">
-			<a href="tel:+79227383321" class="phone-number">
-				<h1>+7 922 738-33-21</h1>
-			</a>
-		</div>
-		<div class="container">
-			<form id="form" action="" class="contact-form">
-				<h2 class="contact-form__heading">Напишите мне</h2>
-				<div class="contact-form__inner">
-					<div class="contact-form__wrapper">
-						<input name="username" type="text" class="contact-form__name" pattern="[A-Za-zА-Яа-яЁё]{3,50}" placeholder="Ваше имя" required>
-						<input name="feedback" type="text" class="contact-form__email" placeholder="Ваш телефон (или email)" required>
-					</div>
-					<div class="contact-form__wrapper--right">
-						<textarea name="message" rows="4" class="contact-form__message" placeholder="Ваше сообщение"></textarea>
-						<label for="form-submit"><input id="form-submit" type="submit" value="Отправить" class="contact-form__submit">~</label>
-						</div>
-
+		<a href="tel:+79227383321" class="phone-number container">
+			<h1>+7 922 738-33-21</h1>
+		</a>
+		<form id="form" action="" class="contact-form container">
+			<h2 class="contact-form__heading">Напишите мне</h2>
+			<div class="contact-form__inner">
+				<div class="contact-form__wrapper">
+					<input name="username" type="text" class="contact-form__name" placeholder="Ваше имя" required>
+					<input name="feedback" type="text" pattern="([a-zA-Zа-яА-ЯёЁ0-9_.+-]+@[а-яА-ЯёЁa-zA-Z0-9-]+\.[а-яА-ЯёЁa-zA-Z0-9-.]+)|[+-.()\d\s]{6,20}" class="contact-form__email" placeholder="Ваш телефон (или email)" title="Ваш телефон (или email)" required>
 				</div>
-			</form>
-		</div>
-		<div class="container--s">
-			<a href="#" class="social-links">
-				<h3>Вконтакте</h3>
-			</a>
-		</div>
-		<div class="container--s">
-			<a href="#" class="social-links--instagram">
-				<h3>Instagram</h3>
-			</a>
-		</div>
-		<div class="container--s">
-			<a href="#" class="social-links--fb">
-				<h3>Facebook</h3>
-			</a>
-		</div>
-		<div class="container--s">
-			<a href="#" class="social-links--twitter">
-				<h3>Twitter</h3>
-			</a>
-		</div>
+				<div class="contact-form__wrapper--right">
+					<textarea name="message" rows="4" class="contact-form__message" placeholder="Ваше сообщение"></textarea>
+					<input id="form-submit" type="submit" value="Отправить" class="contact-form__submit">
+				</div>
+			</div>
+			<div class="form-success">
+				<h2>Ваш запрос отправлен</h2>
+				<p><span>Скоро </span><br>я с вами свяжусь</p>
+				<a href="" class="form-success__close">X</a>
+ 			</div>
+		</form>
+		<a href="#" class="social-links social-links--vk container--s">
+			<h3>Вконтакте</h3>
+			<h2>What is love?</h2>
+		</a>
+		<a href="#" class="social-links social-links--instagram container--s">
+			<h3>Instagram</h3>
+			<h2>Baby don't hurt me</h2>
+		</a>
+		<a href="#" class="social-links social-links--fb container--s">
+			<h3>Facebook</h3>
+			<h2>Don't hurt me</h2>
+		</a>
+		<a href="#" class="social-links social-links--twitter container--s">
+			<h3>Twitter</h3>
+			<h2>No more</h2>
+		</a>
 	</section>
 	<footer class="page-footer">
 		<div class="page-footer__inner">
@@ -97,7 +102,11 @@
 			</div>
 		</div>
 	</footer>
+	<script src="js/vendor/tap.min.js" type="text/javascript"></script>
+	<script src="js/vendor/jquery.min.js" type="text/javascript"></script>
+	<script src="js/vendor/slick.min.js" type="text/javascript"></script>
 	<script src="js/ajax.js" type="text/javascript"></script>
-	<!-- <script src="js/slider.js" type="text/javascript"></script> -->
+	<script src="js/dropdown.js" type="text/javascript"></script>
+	<script src="js/slider.js" type="text/javascript"></script>
 </body>
 </html>

@@ -745,12 +745,19 @@ img{
 }
 
 .photo-item:hover>.photo-item__watch{
+  opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  transition: ease-out .3s;
+  transition-property: -webkit-transform, opacity;
+  transition-property:         transform, opacity;
+  transition-timing-function: ease-out;
+  transition-duration: .3s;
 }
 
 .photo-item:not(:hover)>.photo-item__watch{
+  opacity: 0;
+  transition-property: -webkit-transform, opacity;
+  transition-property:         transform, opacity;
   transition-duration: .3s;
   transition-timing-function: ease-out;
   -webkit-transform: translateY(250%);
@@ -844,12 +851,19 @@ img{
 }
 
 .photo-item--men:hover>.photo-item__watch{
+  opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  transition: ease-out .3s;
+  transition-property: -webkit-transform, opacity;
+  transition-property:         transform, opacity;
+  transition-timing-function: ease-out;
+  transition-duration: .3s;
 }
 
 .photo-item--men:not(:hover)>.photo-item__watch{
+  opacity: 0;
+  transition-property: -webkit-transform, opacity;
+  transition-property:         transform, opacity;
   transition-duration: .3s;
   transition-timing-function: ease-out;
   -webkit-transform: translateY(250%);
@@ -899,12 +913,19 @@ img{
 }
 
 .photo-item--women:hover>.photo-item__watch{
+  opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  transition: ease-out .3s;
+  transition-property: -webkit-transform, opacity;
+  transition-property:         transform, opacity;
+  transition-timing-function: ease-out;
+  transition-duration: .3s;
 }
 
 .photo-item--women:not(:hover)>.photo-item__watch{
+  opacity: 0;
+  transition-property: -webkit-transform, opacity;
+  transition-property:         transform, opacity;
   transition-duration: .3s;
   transition-timing-function: ease-out;
   -webkit-transform: translateY(250%);
@@ -954,12 +975,19 @@ img{
 }
 
 .photo-item--report:hover>.photo-item__watch{
+  opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  transition: ease-out .3s;
+  transition-property: -webkit-transform, opacity;
+  transition-property:         transform, opacity;
+  transition-timing-function: ease-out;
+  transition-duration: .3s;
 }
 
 .photo-item--report:not(:hover)>.photo-item__watch{
+  opacity: 0;
+  transition-property: -webkit-transform, opacity;
+  transition-property:         transform, opacity;
   transition-duration: .3s;
   transition-timing-function: ease-out;
   -webkit-transform: translateY(250%);
@@ -1009,12 +1037,19 @@ img{
 }
 
 .photo-item--child:hover>.photo-item__watch{
+  opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  transition: ease-out .3s;
+  transition-property: -webkit-transform, opacity;
+  transition-property:         transform, opacity;
+  transition-timing-function: ease-out;
+  transition-duration: .3s;
 }
 
 .photo-item--child:not(:hover)>.photo-item__watch{
+  opacity: 0;
+  transition-property: -webkit-transform, opacity;
+  transition-property:         transform, opacity;
   transition-duration: .3s;
   transition-timing-function: ease-out;
   -webkit-transform: translateY(250%);
@@ -1064,12 +1099,19 @@ img{
 }
 
 .photo-item--lovestory:hover>.photo-item__watch{
+  opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  transition: ease-out .3s;
+  transition-property: -webkit-transform, opacity;
+  transition-property:         transform, opacity;
+  transition-timing-function: ease-out;
+  transition-duration: .3s;
 }
 
 .photo-item--lovestory:not(:hover)>.photo-item__watch{
+  opacity: 0;
+  transition-property: -webkit-transform, opacity;
+  transition-property:         transform, opacity;
   transition-duration: .3s;
   transition-timing-function: ease-out;
   -webkit-transform: translateY(250%);
@@ -1123,8 +1165,24 @@ img{
   color: #fff;
 }
 
+.additional-link:hover{
+  border-color: #fff;
+  transition: border-color .3s ease-in;
+}
+
+.additional-link:not(:hover){
+  border-color: #87919b;
+  transition: border-color .3s ease-out;
+}
+
+.additional-link:not(:hover)>h1{
+  color: #fff;
+  transition: color .3s ease;
+}
+
 .additional-link:hover>h1{
   color: link-color--hover;
+  transition: color .3s ease;
 }
 
 .price{
@@ -1141,16 +1199,6 @@ img{
   background-image: url("../img/bg-price.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.price:hover>.additional-link{
-  border-color: #fff;
-  transition: border-color .5s ease-in;
-}
-
-.price:not(:hover)>.additional-link{
-  border-color: #87919b;
-  transition: border-color .3s ease-out;
 }
 
 .advantages{
@@ -1441,16 +1489,6 @@ img{
   background-size: cover;
 }
 
-.reviews:hover>.additional-link{
-  border-color: #fff;
-  transition: border-color .5s ease-in;
-}
-
-.reviews:not(:hover)>.additional-link{
-  border-color: #87919b;
-  transition: border-color .3s ease-out;
-}
-
 .contacts{
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1546,7 +1584,7 @@ img{
   font-size: 2.4rem;
   line-height: 1.4;
   font-weight: 100;
-  color: #95a5a6;
+  color: #2c3e50;
   border: .2rem solid #95a5a6;
   outline: none;
   width: 100%;
@@ -1569,6 +1607,18 @@ img{
   outline: none;
 }
 
+.contact-form__name::-webkit-input-placeholder{
+  color: #95a5a6;
+}
+
+.contact-form__name::-moz-placeholder{
+  color: #95a5a6;
+}
+
+.contact-form__name::-ms-input-placeholder{
+  color: #95a5a6;
+}
+
 .contact-form__email{
   margin: 0;
   padding: 0;
@@ -1579,7 +1629,7 @@ img{
   font-size: 2.4rem;
   line-height: 1.4;
   font-weight: 100;
-  color: #95a5a6;
+  color: #2c3e50;
   border: .2rem solid #95a5a6;
   outline: none;
   margin-right: 6.25%;
@@ -1603,12 +1653,36 @@ img{
   outline: none;
 }
 
+.contact-form__email::-webkit-input-placeholder{
+  color: #95a5a6;
+}
+
+.contact-form__email::-moz-placeholder{
+  color: #95a5a6;
+}
+
+.contact-form__email::-ms-input-placeholder{
+  color: #95a5a6;
+}
+
 .contact-form__email:invalid{
   box-shadow: none;
   outline: none;
   color: #e41c1c;
   background-color: #ffebeb;
   border-color: #e41c1c;
+}
+
+.contact-form__email:invalid::-webkit-input-placeholder{
+  color: #e41c1c;
+}
+
+.contact-form__email:invalid::-moz-placeholder{
+  color: #e41c1c;
+}
+
+.contact-form__email:invalid:-ms-input-placeholder{
+  color: #e41c1c;
 }
 
 .contact-form__message{
@@ -1621,7 +1695,7 @@ img{
   font-size: 2.4rem;
   line-height: 1.4;
   font-weight: 100;
-  color: #95a5a6;
+  color: #2c3e50;
   border: .2rem solid #95a5a6;
   outline: none;
   float: right;
@@ -1650,6 +1724,18 @@ img{
   outline: none;
 }
 
+.contact-form__message::-webkit-input-placeholder{
+  color: #95a5a6;
+}
+
+.contact-form__message::-moz-placeholder{
+  color: #95a5a6;
+}
+
+.contact-form__message::-ms-input-placeholder{
+  color: #95a5a6;
+}
+
 .contact-form__submit{
   margin: 0;
   padding: 0;
@@ -1660,7 +1746,7 @@ img{
   font-size: 2.4rem;
   line-height: 1.4;
   font-weight: 100;
-  color: #95a5a6;
+  color: #2c3e50;
   border: .2rem solid #95a5a6;
   outline: none;
   -webkit-align-self: flex-end;
@@ -1694,6 +1780,18 @@ img{
 .contact-form__submit:invalid{
   box-shadow: none;
   outline: none;
+}
+
+.contact-form__submit::-webkit-input-placeholder{
+  color: #95a5a6;
+}
+
+.contact-form__submit::-moz-placeholder{
+  color: #95a5a6;
+}
+
+.contact-form__submit::-ms-input-placeholder{
+  color: #95a5a6;
 }
 
 .contact-form__submit:hover{
@@ -2117,13 +2215,13 @@ img{
 
 @media (min-width: 1279px){
   html{
-    font-size: 6.66px;
+    font-size: 6.7px;
   }
 }
 
 @media (min-width: 1359px){
   html{
-    font-size: 7.08px;
+    font-size: 7.1px;
   }
 }
 
@@ -2222,13 +2320,13 @@ img{
   }
 
   .slider__btn::after{
-    top: 1.4vw;
+    top: 3.2rem;
     width: 2.25rem;
     height: 2.25rem;
   }
 
   .slider__btn--right::after{
-    top: 1.4vw;
+    top: 3.2rem;
     width: 2.25rem;
     height: 2.25rem;
   }
@@ -2254,7 +2352,7 @@ img{
   }
 
   .advantage-item>p{
-    font-size: 3.984rem;
+    font-size: 4rem;
   }
 
   .advantage-item--requisit{
@@ -2290,7 +2388,7 @@ img{
   }
 
   .advantage-item--exp>p{
-    font-size: 3.984rem;
+    font-size: 4rem;
   }
 
   .advantage-item--participation{
@@ -2326,7 +2424,7 @@ img{
   }
 
   .advantage-item--approach>p{
-    font-size: 3.984rem;
+    font-size: 4rem;
   }
 
   .advantage-item--committal{
@@ -2340,37 +2438,37 @@ img{
   }
 
   .advantage-item--committal>p{
-    font-size: 3.984rem;
+    font-size: 4rem;
   }
 
   .contact-form__name{
     padding-top: 2.2rem;
     padding-bottom: 2.2rem;
-    font-size: 3.984rem;
+    font-size: 4rem;
   }
 
   .contact-form__email{
     padding-top: 2.2rem;
     padding-bottom: 2.2rem;
-    font-size: 3.984rem;
+    font-size: 4rem;
   }
 
   .contact-form__message{
     padding-top: 2.2rem;
     padding-bottom: 2.2rem;
-    font-size: 3.984rem;
+    font-size: 4rem;
   }
 
   .contact-form__submit{
     padding-top: 2.2rem;
     padding-bottom: 2.2rem;
-    font-size: 3.984rem;
+    font-size: 4rem;
   }
 
   .contact-form__heading{
     margin-top: 3.8%;
     margin-bottom: 4.8%;
-    font-size: 9.99rem;
+    font-size: 10rem;
   }
 
   .contact-form label::after{
@@ -2379,48 +2477,48 @@ img{
   }
 
   .social-links>h3{
-    font-size: 6.972rem;
+    font-size: 7rem;
   }
 
   .social-links>h2{
-    font-size: 6.142rem;
+    font-size: 6.1rem;
   }
 
   .social-links--instagram>h3{
-    font-size: 6.972rem;
+    font-size: 7rem;
   }
 
   .social-links--instagram>h2{
-    font-size: 6.142rem;
+    font-size: 6.1rem;
   }
 
   .social-links--fb>h3{
-    font-size: 6.972rem;
+    font-size: 7rem;
   }
 
   .social-links--fb>h2{
-    font-size: 6.142rem;
+    font-size: 6.1rem;
   }
 
   .social-links--twitter>h3{
-    font-size: 6.972rem;
+    font-size: 7rem;
   }
 
   .social-links--twitter>h2{
-    font-size: 6.142rem;
+    font-size: 6.1rem;
   }
 
   .phone-number>h1{
-    font-size: 12rem;
+    font-size: 14.4rem;
   }
 
   .page-footer__descr{
     margin-bottom: 4rem;
-    font-size: 3.984rem;
+    font-size: 4rem;
   }
 
   .copyright-text{
-    font-size: 3.984rem;
+    font-size: 4rem;
   }
 }
 

@@ -20,7 +20,23 @@
 		color: @link-color;
 	}
 
+	&:hover{
+		border-color: @white;
+		transition: border-color .3s ease-in;
+	}
+
+	&:not(:hover){
+		border-color: @border-color;
+		transition: border-color .3s ease-out;
+	}
+
+	&:not(:hover)>h1{
+		color: @link-color;
+		transition: color .3s ease;
+	}
+
 	&:hover>h1{
 		color: link-color--hover;
+		transition: color .3s ease;
 	}
 }

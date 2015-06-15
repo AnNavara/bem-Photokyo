@@ -9,11 +9,16 @@
 	overflow: hidden;
 
 	&:hover>.photo-item__watch{
+		opacity: 1;
 		transform: translateY(0);
-		transition: ease-out .3s;
+		transition-property: transform, opacity;
+		transition-timing-function: ease-out;
+		transition-duration: .3s;
 	}
 
 	&:not(:hover)>.photo-item__watch{
+		opacity: 0;
+		transition-property: transform, opacity;
 		transition-duration: .3s;
 		transition-timing-function: ease-out;
 		transform: translateY(250%);
@@ -123,12 +128,12 @@
 
 		&__header{
 			margin-left: 7rem;
-			font-size: (@font-size--h6 * 2);
+			font-size: round((@font-size--h6 * 2), 1);
 		}
 
 		&__watch{
 			margin-left: 7rem;
-			font-size: (@font-size--small * 2);
+			font-size: round((@font-size--small * 2), 1);
 		}
 	}
 }

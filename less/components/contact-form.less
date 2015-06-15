@@ -11,7 +11,7 @@
 	font-size: @font-size;
 	line-height: @line-height;
 	font-weight: @text-weight;
-	color: @form-color;
+	color: @blue;
 	border: .2rem solid @bg--form;
 	outline: none;
 
@@ -30,6 +30,18 @@
 	&:invalid{
 		box-shadow: none;
 		outline: none;
+	}
+
+	&::-webkit-input-placeholder{
+		color: @form-color;
+	}
+
+	&::-moz-placeholder{
+		color: @form-color;
+	}
+
+	&::-ms-input-placeholder{
+		color: @form-color;
 	}
 }
 
@@ -100,6 +112,18 @@
 			color: @red;
 			background-color: @red--lighten;
 			border-color: @red;
+		}
+
+		&:invalid::-webkit-input-placeholder{
+			color: @red;
+		}
+
+		&:invalid::-moz-placeholder{
+			color: @red;
+		}
+
+		&:invalid:-ms-input-placeholder{
+			color: @red;
 		}
 	}
 
@@ -211,31 +235,31 @@
 		&__name{
 			padding-top: 2.2rem;
 			padding-bottom: 2.2rem;
-			font-size: (@font-size * 1.66);
+			font-size: round((@font-size * 1.66), 1);
 		}
 
 		&__email{
 			padding-top: 2.2rem;
 			padding-bottom: 2.2rem;
-			font-size: (@font-size * 1.66);
+			font-size: round((@font-size * 1.66), 1);
 		}
 
 		&__message{
 			padding-top: 2.2rem;
 			padding-bottom: 2.2rem;
-			font-size: (@font-size * 1.66);
+			font-size: round((@font-size * 1.66), 1);
 		}
 
 		&__submit{
 			padding-top: 2.2rem;
 			padding-bottom: 2.2rem;
-			font-size: (@font-size * 1.66);
+			font-size: round((@font-size * 1.66), 1);
 		}
 
 		&__heading{
 			margin-top: 3.8%;
 			margin-bottom: 4.8%;
-			font-size: (@font-size--h4 * 1.85) ;
+			font-size: round((@font-size--h4 * 1.85), 1);
 		}
 
 		& label::after{
