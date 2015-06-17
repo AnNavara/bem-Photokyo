@@ -12,9 +12,13 @@ bower_components
 
 bin
 
-_source
+source
+
+_img-source
 
 .idea
+
+notes.txt
 
 # Windows image file caches
 Thumbs.db

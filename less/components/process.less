@@ -1,7 +1,7 @@
 @import "../variables.less";
 @import "mixins.less";
 
-#photo-content(){
+#process-item(){
 	position: relative;
 	display: flex;
 	flex-direction: row;
@@ -9,10 +9,9 @@
 	background-color: @white;
 }
 
-#photo-content__wrapper(){
+#process-item__wrapper(){
 	position: absolute;
 	top: 0;
-	left: 0;
 	padding-left: 6.7%;
 	padding-right: 8%;
 	padding-top: 4.6874%;
@@ -21,7 +20,7 @@
 	z-index: 10;
 }
 
-#photo-content__before(){
+#process-item__before(){
 	content: "";
 	position: absolute;
 	top: 0;
@@ -32,11 +31,12 @@
 	background-image: linear-gradient(to right, rgba(44, 62, 80, 1) 0, rgba(44, 62, 80, 1) 30%, rgba(44, 62, 80, .6) 50%, rgba(44, 62, 80, 0) 70%);
 }
 
-.photo-content{
-	#photo-content();
+.process-item{
+	#process-item();
 
 	&__wrapper{
-		#photo-content__wrapper();
+		left: 0;
+		#process-item__wrapper();
 	}
 
 	&__header{
@@ -63,26 +63,26 @@
 	}
 
 	&__img{
-		max-width: 100%;
-		height: auto;
+		width: auto;
+		height: 100%;
 	}
 
 	&::before{
-		#photo-content__before();
+		#process-item__before();
 	}
 }
 
-.photo-content--reverse{
-	#photo-content();
+.process-item--reverse{
+	#process-item();
 	justify-content: flex-start;
 
 	&__wrapper{
-		#photo-content__wrapper();
 		left: 50%;
+		#process-item__wrapper();
 	}
 
 	&::before{
-		#photo-content__before();
+		#process-item__before();
 		background-image: linear-gradient(to left, rgba(44, 62, 80, 1) 0, rgba(44, 62, 80, 1) 30%, rgba(44, 62, 80, .6) 50%, rgba(44, 62, 80, 0) 70%);
 	}
 }

@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 		less: {
 			style: {
 				files:{
-					"css/style.css": ["less/style.less"]
+					"build/css/style.css": ["source/less/style.less"]
 				}
 			}
 		},
@@ -16,14 +16,14 @@ module.exports = function(grunt) {
 				browsers: ["last 2 version", "ie 10"]
 			},
 			style: {
-				src: "css/style.css"
+				src: "build/css/style.css"
 			}
 		},
 
 		cmq: {
 			style: {
 				files: {
-					"css/style.css": ["css/style.css"]
+					"build/css/style.css": ["build/css/style.css"]
 				}
 			}
 		},
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
 		csscomb: {
 			style: {
 				expand: true,
-				src: ["css/style.css"]
+				src: ["build/css/style.css"]
 			}
 		},
 
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
 					report: "gzip"
 				},
 				files: {
-					"css/style.min.css": ["css/style.css"]
+					"build/css/style.min.css": ["build/css/style.css"]
 				}
 			}
 		},
@@ -98,11 +98,56 @@ module.exports = function(grunt) {
 				noAlpha: true,
 				lossless: false
 			}
+		},
+
+		copy: {
+			build: {
+				files: [{
+					expand: true,
+					cwd: "source",
+					src: [
+						"img/**",
+						"js/**",
+						"*.html"
+					],
+					dest: "build"
+				}]
+			}
+		},
+
+		clean: {
+			build: ["build"]
+		},
+
+		replace: {
+			build: {
+				options: {
+					patterns: [{
+						match: /[\"\']img\//g,
+						replacement: '"/img/'
+					}, {
+						match: /[\"\']css\//g,
+						replacement: '"/css/'
+					}, {
+						match: /[\"\']js\//g,
+						replacement: '"/js/'
+					}]
+				},
+				files: [{
+					expand: true,
+					src: [
+						"build/css/style*.css",
+						"build/*.html"
+					]
+				}]
+			}
 		}
 
 	});
 
 		grunt.registerTask("build", [
+			"clean",
+			"copy",
 			"less",
 			"autoprefixer",
 			"cmq",

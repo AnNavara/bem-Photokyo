@@ -17,10 +17,8 @@
 	position: absolute;
 	content: "";
 	top: 1.95vw;
-	right: 0;
 	width: 1.4rem;
 	height: 1.4rem;
-	transform: rotate(-38deg) skewY(-5deg) skewY(-5deg);
 	border-top: 2px solid @link-color;
 	border-left: 2px solid @link-color;
 }
@@ -82,7 +80,9 @@
 		}
 
 		&::after{
+			right: 0;
 			#btn-slider-after();
+			transform: rotate(-38deg) skewY(-5deg) skewY(-5deg);
 		}
 	}
 
@@ -94,9 +94,8 @@
 		}
 
 		&::after{
-			#btn-slider-after();
 			left: 0;
-			right: auto;
+			#btn-slider-after();
 			transform: rotate(139deg) skewY(-5deg) skewY(-5deg);
 		}
 	}

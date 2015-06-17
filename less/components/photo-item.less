@@ -7,6 +7,51 @@
 	flex-direction: column;
 	align-items: stretch;
 	overflow: hidden;
+}
+
+.photo-item{
+	#photo-item();
+
+	&__header{
+		position: absolute;
+		z-index: 10;
+		bottom: 7%;
+		margin: 0;
+		margin-left: 5rem;
+		padding: 0;
+		font-family: @font-family--heading;
+		font-size: @font-size--h6;
+		letter-spacing: 0.026em;
+		font-weight: @heading-weight;
+		line-height: @line-height--heading;
+		color: @heading-color;
+		text-align: center;
+		transform: translateY(0);
+	}
+
+	&__watch{
+		position: absolute;
+		z-index: 10;
+		top: 84.79%;
+		margin: 0;
+		margin-left: 5rem;
+		padding-left: 1em;
+		padding-right: 1em;
+		padding-top: .4em;
+		padding-bottom: .4em;
+		font-size: @font-size--small;
+		font-weight: @heading-weight;
+		line-height: @line-height--heading;
+		color: @heading-color;
+		border: 1px solid @border-color--transparent;
+		transform: translateY(250%);
+	}
+
+	&__img{
+		width: 100%;
+		min-width: 100%;
+		height: auto;
+	}
 
 	&:hover>.photo-item__watch{
 		opacity: 1;
@@ -50,52 +95,9 @@
 	}
 }
 
-.photo-item{
+.photo-item--wedding{
 	#photo-item();
 	background-color: @color--wedding;
-
-	&__header{
-		position: absolute;
-		z-index: 10;
-		bottom: 7%;
-		margin: 0;
-		margin-left: 5rem;
-		padding: 0;
-		// margin-bottom: .5vw;
-		font-family: @font-family--heading;
-		font-size: @font-size--h6;
-		letter-spacing: 0.026em;
-		font-weight: @heading-weight;
-		line-height: @line-height--heading;
-		color: @heading-color;
-		text-align: center;
-		transform: translateY(0);
-	}
-
-	&__watch{
-		position: absolute;
-		z-index: 10;
-		top: 84.79%;
-		margin: 0;
-		margin-left: 5rem;
-		padding: 0;
-		padding-left: 1em;
-		padding-right: 1em;
-		padding-top: .4em;
-		padding-bottom: .4em;
-		font-size: @font-size--small;
-		font-weight: @heading-weight;
-		line-height: @line-height--heading;
-		color: @heading-color;
-		border: 1px solid @border-color--transparent;
-		transform: translateY(250%);
-	}
-
-	&__img{
-		width: 100%;
-		min-width: 100%;
-		height: auto;
-	}
 }
 
 .photo-item--men{

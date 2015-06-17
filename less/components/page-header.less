@@ -2,7 +2,6 @@
 @import "mixins.less";
 
 #nav(){
-	padding: 8rem;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -18,12 +17,13 @@
 	overflow: hidden;
 
 	&__nav{
-		#nav();
 		position: absolute;
+		padding: 8rem;
+		#nav();
 
 		&--alt{
-			#nav();
 			padding: 2.5rem 8rem;
+			#nav();
 		}
 	}
 
