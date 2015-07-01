@@ -14,7 +14,6 @@
 	position: relative;
 	width: 100%;
 	min-height: 12.5rem;
-	overflow: hidden;
 
 	&__nav{
 		position: absolute;
@@ -34,7 +33,7 @@
 	}
 
 	&__logo{
-		margin-left: 2.6vw;
+		margin-left: 10.2rem;
 		text-transform: uppercase;
 	}
 
@@ -56,8 +55,12 @@
 
 	.page-header{
 
-		&__logo>h1{
-			font-size: round((@font-size--h3 * 1.48), 1);
+		&__logo{
+			margin-left: 14rem;
+
+			>h1{
+				font-size: round((@font-size--h3 * 1.48), 1);
+			}
 		}
 
 		&__phone>h2{

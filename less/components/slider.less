@@ -114,27 +114,39 @@
 
 	.slider{
 
-		&__counter{
+		&__nav{
+			bottom: 6rem;
+		}
 
-			font-size: round((@font-size--medium * 1.66), 1);;
+		&__counter{
+			font-size: round((@font-size--medium * 2), 1);;
 		}
 
 		&__btn{
+			height: 12rem;
 
 			&::after{
-				top: 3.2rem;
-				width: 2.25rem;
-				height: 2.25rem;
+				top: 4.6rem;
+				width: 3.3rem;
+				height: 3.3rem;
 			}
 		}
 
 		&__btn--right{
+			height: 12rem;
 
 			&::after{
-				top: 3.2rem;
-				width: 2.25rem;
-				height: 2.25rem;
+				top: 4.6rem;
+				width: 3.3rem;
+				height: 3.3rem;
 			}
+		}
+	}
+
+	.gallery-item{
+
+		&__header{
+			bottom: 22rem;
 		}
 	}
 }

@@ -5,6 +5,10 @@
 	height: @container-height;
 }
 
+#container--flex(){
+	min-height: @container-height;
+}
+
 .container{
 	#container();
 	width: 50%;
@@ -17,6 +21,26 @@
 
 .container--l{
 	#container();
+	width: 100%;
+}
+
+.container--half{
+	height: (@container-height / 2);
+	width: 100%;
+}
+
+.container--flex{
+	#container--flex();
+	width: 50%;
+}
+
+.container--flex-s{
+	#container--flex();
+	width: 25%;
+}
+
+.container--flex-l{
+	#container--flex();
 	width: 100%;
 }
 
@@ -35,5 +59,25 @@
 	.container--l{
 		width: 100%;
 		height: ceil(@container-height*2);
+	}
+
+	.container--half{
+		height: ceil(@container-height / 1.2);
+		width: 100%;
+	}
+
+	.container--flex{
+		#container--flex();
+		width: 100%;
+	}
+
+	.container--flex-s{
+		#container--flex();
+		width: 50%;
+	}
+
+	.container--flex-l{
+		#container--flex();
+		width: 100%;
 	}
 }

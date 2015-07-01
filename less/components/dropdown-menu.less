@@ -5,13 +5,18 @@
 .dropdown-menu{
 
 	&__toggle{
-		position: relative;
+		position: fixed;
 		font-size: 0;
-		margin-top: .8vmin;
+		top: 4rem;
+		left: 9rem;
 		width: 5.2rem;
 		height: 4.8rem;
 		z-index: 100;
 		outline: none;
+
+		&--main{
+			top: 9.7rem;
+		}
 
 		&::before{
 			position: absolute;
@@ -60,7 +65,8 @@
 	}
 
 	&__container{
-		position: absolute;
+		position: fixed;
+		z-index: 50;
 		top: 0;
 		left: -50%;
 		margin: 0;
@@ -110,8 +116,13 @@
 	.dropdown-menu{
 
 		&__toggle{
+			top: 5rem;
 			width: 8rem;
 			height: 8rem;
+
+			&--main{
+				top: 10.4rem;
+			}
 
 			&::before{
 				width: 8rem;
