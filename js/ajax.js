@@ -23,9 +23,6 @@
 		request(data, function(response) {
 			console.log(response);
 		});
-
-
-
 	});
 
 	close.addEventListener("tap", function(event) {
@@ -54,8 +51,3 @@
 	}
 
 })();
-
-/*
-		var form = document.getElementById("form");
-		var data = new FormData(form);
-*/

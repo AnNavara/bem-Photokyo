@@ -1,5 +1,14 @@
 @import "../variables.less";
 
+#clear(){
+  &:before,
+  &:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 #flex-center(){
 	display: flex;
 	justify-content: center;
@@ -35,4 +44,50 @@
 	line-height: @line-height;
 	font-weight: @text-weight;
 	color: @text-color;
+}
+
+#form-field(){
+	padding-top: 1.1rem;
+	padding-bottom: 1.1rem;
+	font-size: @font-size;
+	line-height: @line-height;
+	font-weight: @text-weight;
+	border: .2rem solid @bg--form;
+	outline: none;
+
+
+	&:focus{
+		border: .2rem solid lighten(@bg--form, 15%);
+	}
+
+	&:required{
+		outline: none;
+	}
+
+	&:valid{
+		outline: none;
+	}
+
+	&:invalid{
+		box-shadow: none;
+		outline: none;
+	}
+
+	&::-webkit-input-placeholder{
+		color: @form-color;
+	}
+
+	&::-moz-placeholder{
+		color: @form-color;
+	}
+
+	&::-ms-input-placeholder{
+		color: @form-color;
+	}
+}
+
+#form-field--special(){
+	padding-left: 5.5%;
+	padding-right: 4.5%;
+	color: @blue;
 }

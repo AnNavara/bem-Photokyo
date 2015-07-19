@@ -1,53 +1,6 @@
 @import "../variables.less";
 @import "mixins.less";
 
-#form-field--special(){
-	padding-left: 5.5%;
-	padding-right: 4.5%;
-	color: @blue;
-	border: .2rem solid @bg--form;
-}
-
-#form-field(){
-	margin: 0;
-	padding: 0;
-	padding-top: 1.1rem;
-	padding-bottom: 1.1rem;
-	font-size: @font-size;
-	line-height: @line-height;
-	font-weight: @text-weight;
-	outline: none;
-
-	&:focus{
-		border: .2rem solid lighten(@bg--form, 15%);
-	}
-
-	&:required{
-		outline: none;
-	}
-
-	&:valid{
-		outline: none;
-	}
-
-	&:invalid{
-		box-shadow: none;
-		outline: none;
-	}
-
-	&::-webkit-input-placeholder{
-		color: @form-color;
-	}
-
-	&::-moz-placeholder{
-		color: @form-color;
-	}
-
-	&::-ms-input-placeholder{
-		color: @form-color;
-	}
-}
-
 .contact-form{
 	position: relative;
 	display: flex;
@@ -145,28 +98,7 @@
 		#form-field();
 		align-self: flex-end;
 		margin-top: 9.61%;
-		padding-left: 8.15%;
 		width: 49.5%;
-		color: @link-color;
-		text-align: left;
-		background-color: @bg--submit;
-		background-image: @icon-submit;
-		background-repeat: no-repeat;
-		background-size: 12.6%;
-		background-position: 87%;
-		border: none;
-
-		&:hover{
-			background-color: darken(@bg--submit, 15%);
-		}
-
-		&:focus{
-			border: .2rem solid @bg--form;
-		}
-
-		&:active{
-			border: .2rem solid lighten(@bg--form, 15%)
-		}
 	}
 }
 
@@ -187,32 +119,8 @@
 	}
 
 	&__close{
-		position: absolute;
 		top: 3.55vw;
 		right: 3.85vw;
-		width: 2.4vw;
-		height: 2.4vw;
-		font-size: 0;
-
-		&::before{
-			position: absolute;
-			content: "";
-			top: 0;
-			left: 0;
-			height: 100%;
-			border-left: 1px solid @white;
-			transform: skewX(45deg) translateX(1.2vw);
-		}
-
-		&::after{
-			position: absolute;
-			content: "";
-			top: 0;
-			right: 0;
-			height: 100%;
-			border-right: 1px solid @white;
-			transform: skewX(-45deg) translateX(-1.2vw);
-		}
 	}
 
 	&>h2{

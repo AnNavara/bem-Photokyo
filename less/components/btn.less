@@ -1,0 +1,54 @@
+@import "../variables.less";
+@import "mixins.less";
+
+
+.btn--sumbit{
+	color: @link-color;
+	text-align: left;
+	padding-left: 8.15%;
+	background-color: @bg--submit;
+	background-image: @icon-submit;
+	background-repeat: no-repeat;
+	background-size: 12.6%;
+	background-position: 87%;
+	border: none;
+
+	&:hover{
+		background-color: darken(@bg--submit, 15%);
+	}
+
+	&:focus{
+		border: .2rem solid @bg--form;
+	}
+
+	&:active{
+		border: .2rem solid lighten(@bg--form, 15%)
+	}
+}
+
+.btn--close{
+	position: absolute;
+	width: 2.4vw;
+	height: 2.4vw;
+	font-size: 0;
+
+	&::before{
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		height: 100%;
+		border-left: 1px solid @white;
+		transform: skewX(45deg) translateX(1.2vw);
+	}
+
+		&::after{
+		position: absolute;
+		content: "";
+		top: 0;
+		right: 0;
+		height: 100%;
+		border-right: 1px solid @white;
+		transform: skewX(-45deg) translateX(-1.2vw);
+	}
+}

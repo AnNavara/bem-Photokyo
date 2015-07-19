@@ -1,0 +1,127 @@
+@import "../variables.less";
+@import "mixins.less";
+
+.page-title{
+	position: relative;
+	width: 100%;
+	padding: 8.5rem 4.27% 9rem 4.27%;
+	background-color: @bg--light;
+	display: flex;
+	justify-content: flex-end;
+	align-items: baseline;
+	align-content: center;
+
+	&__scaff{
+		flex-grow: 1;
+		flex-basis: 6%;
+	}
+
+	>h1{
+		flex-grow: 1;
+		#header();
+		font-size: @font-size--h3;
+		color: @heading-color--dark;
+		text-align: center;
+	}
+}
+
+.add-review{
+	position: relative;
+	flex-grow: 1;
+	flex-basis: 6%;
+	font-weight: @text-weight;
+	font-size: 3rem;
+	letter-spacing: .020em;
+	line-height: @line-height--heading;
+	color: @azure;
+	text-align: end;
+
+	&:hover{
+		color: darken(@azure, 15%);
+	}
+
+	&__form{
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		top: 0;
+		right: -50%;
+		padding: 4rem 4.16vw 6rem;
+		z-index: 50;
+		min-width: 34%;
+		background-color: @form-color;
+		transition: right .6s ease;
+
+		&--show{
+			right: 0;
+			transition: right .6s ease;
+		}
+	}
+
+	&__heading{
+		margin: 0 0 5rem 0;
+		font-size: @font-size--h4;
+		line-height: @line-height--heading;
+		color: @heading-color;
+		font-weight: @heading-weight;
+	}
+
+	&__name{
+		margin-bottom: 4.5rem;
+		width: 62%;
+		#form-field();
+		#form-field--special();
+	}
+
+	&__message{
+		#form-field();
+		#form-field--special();
+		resize: vertical;
+	}
+
+	&__sumbit{
+		#form-field();
+		align-self: flex-end;
+		margin-top: 4.5rem;
+		width: 45%;
+	}
+
+	&__close{
+		top: 5.4rem;
+		right: 4.16vw;
+		width: 1.8vw;
+		height: 1.8vw;
+
+		&::before{
+			transform: skewX(45deg) translateX(.9vw);
+		}
+		&::after{
+			transform: skewX(-45deg) translateX(-.9vw);
+		}
+	}
+
+	&::before{
+		position: absolute;
+		content: "";
+		right: 8.2em;
+		top: 1rem;
+		width: 2.9rem;
+		height: 2.6rem;
+		background-image: url("../img/icon-review.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+	}
+}
+
+@media (max-aspect-ratio: 9/10), (max-width: 480px)  and (min-resolution: 1.5dppx){
+	.add-review{
+		font-size: round((3rem * 1.66), 1);
+
+		&::before{
+			top: 1.66rem;
+			width: round((2.9rem * 1.66), 1);
+			height: round((2.6rem * 1.66), 1);
+		}
+	}
+}

@@ -1,0 +1,47 @@
+@import "../variables.less";
+@import "mixins.less";
+
+.contacts{
+	position: relative;
+	overflow: hidden;
+	background-image: url("../img/bg-contacts.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	&__wrapper{
+		justify-content: flex-start;
+		padding: 3.9vw 0% 3.9vw 13.5%;
+	}
+
+	&__heading{
+		margin: 0;
+		font-size: @font-size--h2;
+		line-height: @line-height--heading;
+		font-weight: @heading-weight;
+	}
+
+	&__text{
+		margin: 0;
+		font-size: @font-size--h4;
+		line-height: @line-height--heading;
+		font-weight: @text-weight;
+	}
+}
+
+@media (max-aspect-ratio: 9/10), (max-width: 480px)  and (min-resolution: 1.5dppx){
+	.contacts{
+		&__wrapper{
+			justify-content: center;
+			padding-left: 8.5vw;
+			width: 100%;
+		}
+		&__heading{
+			margin-bottom: 4rem;
+			font-size: round(@font-size--h2 * 1.66, 1);
+		}
+		&__text{
+			font-size: round(@font-size--h4 * 1.66, 1);
+		}
+	}
+}

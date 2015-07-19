@@ -16,14 +16,14 @@ module.exports = function(grunt) {
 				browsers: ["last 2 version", "ie 10"]
 			},
 			style: {
-				src: "build/css/style.css"
+				src: "css/style.css"
 			}
 		},
 
 		cmq: {
 			style: {
 				files: {
-					"build/css/style.css": ["build/css/style.css"]
+					"css/style.css": ["css/style.css"]
 				}
 			}
 		},
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
 		csscomb: {
 			style: {
 				expand: true,
-				src: ["build/css/style.css"]
+				src: ["css/style.css"]
 			}
 		},
 
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
 					report: "gzip"
 				},
 				files: {
-					"build/css/style.min.css": ["build/css/style.css"]
+					"css/style.min.css": ["build/css/style.css"]
 				}
 			}
 		},
@@ -72,7 +72,7 @@ module.exports = function(grunt) {
 		webp: {
 			files: {
 				expand: true,
-				src: "img/source/**/*.png",
+				src: "_img-source/**/*.png",
 				dest: ""
 			},
 			options: {
@@ -83,7 +83,7 @@ module.exports = function(grunt) {
 				alphaQuality: 85,
 				compressionMethod: 6,
 				segments: 4,
-				psnr: 46,
+				psnr: 44,
 				sns: 50,
 				filterStrength: 60,
 				filterSharpness: 3,
@@ -146,8 +146,8 @@ module.exports = function(grunt) {
 	});
 
 		grunt.registerTask("build", [
-			"clean",
-			"copy",
+			// "clean",
+			// "copy",
 			"less",
 			"autoprefixer",
 			"cmq",
