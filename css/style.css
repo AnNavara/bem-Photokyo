@@ -486,6 +486,41 @@ img{
   text-align: center;
 }
 
+.to-all-stills{
+  padding-left: 1.66%;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-flex-basis: 6%;
+  -ms-flex-preferred-size: 6%;
+          flex-basis: 6%;
+  font-weight: 200;
+  font-size: 3rem;
+  letter-spacing: .020em;
+  line-height: 1.2;
+  color: #14adcd;
+  text-align: left;
+}
+
+.to-all-stills::before{
+  display: inline-block;
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  border-bottom: 2px solid #14adcd;
+  border-left: 2px solid #14adcd;
+  -webkit-transform: rotate(45deg) scale(.4) translateY(1.6rem);
+          transform: rotate(45deg) scale(.4) translateY(1.6rem);
+}
+
+.to-all-stills:hover{
+  color: #0d7287;
+}
+
+.to-all-stills:hover::before{
+  border-color: #0d7287;
+}
+
 .add-review{
   position: relative;
   -webkit-flex-grow: 1;
@@ -494,7 +529,7 @@ img{
   -webkit-flex-basis: 6%;
   -ms-flex-preferred-size: 6%;
           flex-basis: 6%;
-  font-weight: 100;
+  font-weight: 200;
   font-size: 3rem;
   letter-spacing: .020em;
   line-height: 1.2;
@@ -2504,6 +2539,7 @@ img{
 }
 
 .altpage__list{
+  counter-reset: item-list;
   display: -webkit-flex;
   display: -ms-flexbox;
   display:         flex;
@@ -2548,47 +2584,13 @@ img{
 
 .altpage__list-item:before{
   position: absolute;
-  content: "1.";
-  left: -2.2rem;
+  left: -5rem;
   top: 0;
   width: 1rem;
   height: 1rem;
-}
-
-.altpage__list-item:nth-child(2):before{
-  content: "2.";
-}
-
-.altpage__list-item:nth-child(3):before{
-  content: "3.";
-}
-
-.altpage__list-item:nth-child(4):before{
-  content: "4.";
-}
-
-.altpage__list-item:nth-child(5):before{
-  content: "5.";
-}
-
-.altpage__list-item:nth-child(6):before{
-  content: "6.";
-}
-
-.altpage__list-item:nth-child(7):before{
-  content: "7.";
-}
-
-.altpage__list-item:nth-child(8):before{
-  content: "8.";
-}
-
-.altpage__list-item:nth-child(9):before{
-  content: "9.";
-}
-
-.altpage__list-item:nth-child(10):before{
-  content: "10.";
+  display: inline-block;
+  content: "\00a0\00a0\00a0" counter(item-list) ".\00a0";
+  counter-increment: item-list;
 }
 
 .altpage__list-text{
@@ -2728,6 +2730,7 @@ img{
 
 .content__link{
   color: #14adcd;
+  font-weight: 400;
 }
 
 .content__link:link{
@@ -2822,25 +2825,67 @@ img{
   counter-increment: item-list;
 }
 
-.content__img--left{
+.content__item--left{
+  display: block;
   float: left;
   margin-right: 3rem;
   margin-top: 2rem;
   width: 30%;
   height: auto;
-  background-color: #14adcd;
 }
 
-.content__img--right{
+.content__item--left:before,
+.content__item--left:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content__item--left>img{
+  width: 100%;
+  height: auto;
+}
+
+.content__item--left>p{
+  margin: 0;
+  margin-top: 1.5rem;
+  font-size: 2.6rem;
+  line-height: 1.4;
+  color: #4a4a4a;
+  font-weight: 100;
+}
+
+.content__item--right{
+  display: block;
   float: right;
   margin-left: 3rem;
   margin-top: 2rem;
   width: 30%;
   height: auto;
-  background-color: #14adcd;
 }
 
-.content__img--big{
+.content__item--right:before,
+.content__item--right:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content__item--right>img{
+  width: 100%;
+  height: auto;
+}
+
+.content__item--right>p{
+  margin: 0;
+  margin-top: 1.5rem;
+  font-size: 2.6rem;
+  line-height: 1.4;
+  color: #4a4a4a;
+  font-weight: 100;
+}
+
+.content__item--big{
   display: block;
   float: none;
   margin: 0 auto;
@@ -2848,8 +2893,21 @@ img{
   max-width: 960px;
   width: 100%;
   height: auto;
+}
+
+.content__item--big>img{
+  width: 100%;
   max-height: 640px;
-  background-color: #14adcd;
+}
+
+.content__item--big>p{
+  margin: 0;
+  margin-top: 3rem;
+  font-size: 2.6rem;
+  line-height: 1.4;
+  color: #4a4a4a;
+  font-weight: 100;
+  text-align: center;
 }
 
 .iframe{
@@ -2917,6 +2975,28 @@ img{
   padding: 1rem 0;
   border-top: 1px solid #e6e6e6;
   text-align: left;
+}
+
+.gallery{
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.gallery__img{
+  width: 25%;
+  max-width: 360px;
+  height: auto;
 }
 
 .portfolio{
@@ -3549,6 +3629,7 @@ img{
   }
 
   .altpage__list-item{
+    padding-left: 3rem;
     font-size: 4.3rem;
   }
 
@@ -3640,6 +3721,10 @@ img{
 
   .c-table__heading{
     font-size: 4.3rem;
+  }
+
+  .gallery__img{
+    width: 50%;
   }
 
   .portfolio__control{

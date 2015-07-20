@@ -25,12 +25,42 @@
 	}
 }
 
+.to-all-stills{
+	padding-left: 1.66%;
+	flex-grow: 1;
+	flex-basis: 6%;
+	font-weight: @weight--bolden;
+	font-size: @font-size--text-h3;
+	letter-spacing: .020em;
+	line-height: @line-height--heading;
+	color: @azure;
+	text-align: left;
+
+	&::before{
+		display: inline-block;
+		content: "";
+		width: @font-size--text-h3;
+		height: @font-size--text-h3;
+		border-bottom: 2px solid @azure;
+		border-left: 2px solid @azure;
+		transform: rotate(45deg) scale(.4) translateY(1.6rem);
+	}
+
+	&:hover{
+		color: darken(@azure, 15%);
+	}
+
+	&:hover::before{
+		border-color: darken(@azure, 15%);
+	}
+}
+
 .add-review{
 	position: relative;
 	flex-grow: 1;
 	flex-basis: 6%;
-	font-weight: @text-weight;
-	font-size: 3rem;
+	font-weight: @weight--bolden;
+	font-size: @font-size--text-h3;
 	letter-spacing: .020em;
 	line-height: @line-height--heading;
 	color: @azure;

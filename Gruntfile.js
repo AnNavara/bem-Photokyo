@@ -34,6 +34,18 @@ module.exports = function(grunt) {
 				src: ["css/style.css"]
 			}
 		},
+		
+		cssmin: {
+			style: {
+				options: {
+					keepSpecialCommnets: 0,
+					report: "gzip"
+				},
+				files: {
+					"css/style.min.css": ["build/css/style.css"]
+				}
+			}
+		},
 
 		watch: {
 			less: {
@@ -54,18 +66,6 @@ module.exports = function(grunt) {
 					expand: true,
 					src: ["img/**/*.{jpg, png, svg}"]
 				}]
-			}
-		},
-
-		cssmin: {
-			style: {
-				options: {
-					keepSpecialCommnets: 0,
-					report: "gzip"
-				},
-				files: {
-					"css/style.min.css": ["build/css/style.css"]
-				}
 			}
 		},
 
