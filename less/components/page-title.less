@@ -109,7 +109,7 @@
 		resize: vertical;
 	}
 
-	&__sumbit{
+	&__submit{
 		#form-field();
 		align-self: flex-end;
 		margin-top: 4.5rem;
@@ -145,13 +145,51 @@
 }
 
 @media (max-aspect-ratio: 9/10), (max-width: 480px)  and (min-resolution: 1.5dppx){
+
+	.page-title{
+		>h1{
+			font-size: 14rem;
+		}
+	}
+
 	.add-review{
+		padding-left: 6%;
 		font-size: round((3rem * 1.66), 1);
 
 		&::before{
 			top: 1.66rem;
+			right: auto;
+			left: 11%;
 			width: round((2.9rem * 1.66), 1);
 			height: round((2.6rem * 1.66), 1);
+		}
+
+		&__form{
+			right: -70%;
+			min-width: 60%;
+
+			&--show{
+				right: 0;
+			}
+		}
+
+		&__heading{
+			font-size: 6.4rem;
+		}
+
+		&__name{
+			width: 100%;
+			font-size: 3.9rem;
+		}
+
+		&__message{
+			font-size: 3.9rem;
+		}
+
+		&__submit{
+			padding: 2.2rem 0 2.2rem 8.15%;
+			width: 50%;
+			font-size: 3.9rem;
 		}
 	}
 }

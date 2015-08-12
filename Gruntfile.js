@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 		less: {
 			style: {
 				files:{
-					"css/style.css": ["less/style.less"]
+					"build/css/style.css": ["source/less/style.less"]
 				}
 			}
 		},
@@ -16,14 +16,14 @@ module.exports = function(grunt) {
 				browsers: ["last 2 version", "ie 10"]
 			},
 			style: {
-				src: "css/style.css"
+				src: "build/css/style.css"
 			}
 		},
 
 		cmq: {
 			style: {
 				files: {
-					"css/style.css": ["css/style.css"]
+					"build/css/style.css": ["build/css/style.css"]
 				}
 			}
 		},
@@ -31,10 +31,10 @@ module.exports = function(grunt) {
 		csscomb: {
 			style: {
 				expand: true,
-				src: ["css/style.css"]
+				src: ["build/css/style.css"]
 			}
 		},
-		
+
 		cssmin: {
 			style: {
 				options: {
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
 					report: "gzip"
 				},
 				files: {
-					"css/style.min.css": ["build/css/style.css"]
+					"build/css/style.min.css": ["build/css/style.css"]
 				}
 			}
 		},
@@ -146,8 +146,8 @@ module.exports = function(grunt) {
 	});
 
 		grunt.registerTask("build", [
-			// "clean",
-			// "copy",
+			"clean",
+			"copy",
 			"less",
 			"autoprefixer",
 			"cmq",

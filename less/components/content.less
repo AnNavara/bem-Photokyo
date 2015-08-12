@@ -235,14 +235,17 @@
 }
 
 .c-table{
-	margin: 0 12.85%;
-	margin-bottom: 3rem;
 	font-size: @font-size--medium;
 	line-height: @line-height--heading;
 	font-weight: @text-weight;
 	color: @color--content;
-	border-collapse: separate;
-	border-spacing: 3vw 3px;
+	border-collapse: collapse;
+
+	&__wrapper{
+		display: flex;
+		justify-content: center;
+		margin: 0 12.85% 3rem 12.85%;
+	}
 
 	&__caption{
 		margin-bottom: 3rem;
@@ -250,19 +253,19 @@
 	}
 
 	&__heading{
-		padding: 1rem 0;
+		padding: 1rem 8rem 0 0;
 		font-size: @font-size--medium;
 		line-height: @line-height--heading;
 		font-weight: @text-weight;
 		color: @color--content;
 		border-bottom: 1px solid #e6e6e6;
-		text-align: left;
+		text-align: center;
 	}
 
 	&__cell{
 		padding: 1rem 0;
 		border-top: 1px solid #e6e6e6;
-		text-align: left;
+		text-align: center;
 	}
 }
 
@@ -293,10 +296,32 @@
 			}
 		}
 
+		&__item--left{
+			>p{
+				font-size: round(@font-size--medium * 1.66, 1);
+				text-align: center;
+			}
+		}
+
+		&__item--right{
+			>p{
+				font-size: round(@font-size--medium * 1.66, 1);
+				text-align: center;
+			}
+		}
+
+		&__item--big{
+			>p{
+				font-size: round(@font-size--medium * 1.66, 1);
+			}
+		}
+
 		&__heading{
+			line-height: 1.1;
 			font-size: round(@font-size--text-h2 * 1.66, 1);
 
 			&--small{
+				line-height: 1.1;
 				font-size: round(@font-size--text-h3 * 1.66, 1);
 			}
 		}
@@ -327,8 +352,6 @@
 		}
 	}
 
-
-
 	.c-table{
 		font-size: round(@font-size--medium * 1.66, 1);
 
@@ -343,23 +366,4 @@
 			width: 50%;
 		}
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

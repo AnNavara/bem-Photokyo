@@ -7,9 +7,10 @@
 	var btn_prev 				= document.querySelector(".popup__prev");
 	var btn_next 				= document.querySelector(".popup__next");
 	var btn_close_big		= document.querySelector(".popup__close--big");
+	var popup_counter		= document.querySelector(".popup__counter");
 
 	var portfolio_pics	= document.querySelector(".portfolio__wrapper");
-	var gallery_pics 		= document.querySelector(".gallery")
+	var gallery_pics 		= document.querySelector(".gallery");
 
 	img_gal(portfolio_pics, ".portfolio__item");
 
@@ -30,6 +31,7 @@
 
 			var index = items_arr.indexOf(target.parentElement);
 			change_atri(index, items_arr);
+			popup_counter.innerHTML = (index + 1) + " фото из " + items_arr.length;
 
 			btn_next.addEventListener("tap", function(e) {
 				event.preventDefault();
@@ -51,6 +53,7 @@
 			function change_atri(elem_index, arr){
 				popup_img.setAttribute("src", arr[elem_index].getAttribute("data-img"));
 				popup_link.setAttribute("href", arr[elem_index].getAttribute("href"));
+				popup_counter.innerHTML = (elem_index + 1) + " фото из " + arr.length;
 			}
 
 			function close(btn, object, object_css_class) {
@@ -59,6 +62,6 @@
 					object.classList.remove(object_css_class);
 				});
 			}
-		})
-	};
+		});
+	}
 })();

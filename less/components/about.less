@@ -4,16 +4,45 @@
 .about{
 	position: relative;
 	overflow: hidden;
+	padding-bottom: 3.1rem;
 	background-image: url("../img/about.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 
 	&__wrapper{
-		padding-top: 6vw;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+		padding: 6.6vw 9% 3.9vw 6.7%;
+		width: 50%;
+		z-index: 10;
 	}
 
 	&__descr{
-		padding-top: 7rem;
+		#text();
+		margin-bottom: 2.2rem;
+		font-size: @font-size--medium;
+
+		&--alt{
+			#text();
+			margin-bottom: 2.2rem;
+			padding-top: 4rem;
+			font-size: @font-size--medium;
+		}
+	}
+}
+
+@media (max-aspect-ratio: 9/10), (max-width: 480px)  and (min-resolution: 1.5dppx){
+	.about{
+
+		&__descr{
+			font-size: 3.9rem;
+
+			&--alt{
+				font-size: 3.9rem;
+			}
+		}
 	}
 }

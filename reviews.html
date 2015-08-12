@@ -92,7 +92,7 @@
 		<a href="tel:+79227383321" class="phone-number container">
 			<h1>+7 922 738-33-21</h1>
 		</a>
-		<form id="form" action="" class="contact-form container">
+		<form id="form" action="#" method="post" class="contact-form container">
 			<h2 class="contact-form__heading">Напишите мне</h2>
 			<div class="contact-form__inner">
 				<div class="contact-form__wrapper">
@@ -101,13 +101,13 @@
 				</div>
 				<div class="contact-form__wrapper--right">
 					<textarea name="message" rows="4" class="contact-form__message" placeholder="Ваше сообщение"></textarea>
-					<input id="form-submit" type="submit" value="Отправить" class="contact-form__submit">
+					<input id="form-submit" type="submit" value="Отправить" class="contact-form__submit btn--submit">
 				</div>
 			</div>
 			<div class="form-success">
+				<a href="#" class="form-success__close btn--close" tabindex="-1">X</a>
 				<h2>Ваш запрос отправлен</h2>
 				<p><span>Скоро </span><br>я с вами свяжусь</p>
-				<a href="" class="form-success__close">X</a>
  			</div>
 		</form>
 		<a href="#" class="social-links social-links--vk container--s">
@@ -142,7 +142,12 @@
 		<h2 class="add-review__heading">Оставить отзыв</h2>
 		<input type="text" name="" id="" class="add-review__name" placeholder="Ваше имя">
 		<textarea class="add-review__message" name="name" rows="8" cols="35" placeholder="Текст отзыва"></textarea>
-		<input type="submit" value="Отправить" class="add-review__sumbit btn--sumbit">
+		<input type="submit" value="Отправить" class="add-review__submit btn--submit">
+		<div class="form-success--alt">
+			<a href="#" class="form-success__close btn--close" tabindex="-1">X</a>
+			<h2>Спасибо за ваш отзыв</h2>
+			<p><span> </span><br></p>
+		</div>
 	</form>
 	<script src="js/vendor/tap.min.js" type="text/javascript"></script>
 	<script src="js/vendor/jquery.min.js" type="text/javascript"></script>

@@ -44,6 +44,7 @@
 		xhr.addEventListener("readystatechange", function() {
 			if (xhr.readyState == 4) {
 				fn(xhr.resposeText);
+				success.classlist.add("form-success--active");
 				}
 		});
 

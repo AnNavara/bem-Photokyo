@@ -5,7 +5,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	padding: 5rem 5% 5rem 3.125%;
+	padding: 4rem 4% 5rem 3.125%;
 	background-image: @bg-price;
 	background-position: right top;
 	background-size: cover;
@@ -26,7 +26,7 @@
 
 	&--more{
 		min-height: 0;
-		padding-bottom: 7rem;
+		padding-bottom: 3.7rem;
 		background-image: @bg-price--more;
 		background-color: @bg-color--more;
 	}
@@ -34,24 +34,25 @@
 	&__heading{
 		margin: 0;
 		margin-bottom: 3.5rem;
-		font-size: @font-size--h4;
+		font-size: @font-size--h6;
 		line-height: @line-height--heading;
 		font-weight: @weight--bolden;
+		letter-spacing: @letter-spacing;
 	}
 
 	&__catchy{
 		display: block;
 		margin: 0;
 		margin-bottom: 3.5rem;
-		padding: 1.1rem 3% 1.7rem;
-		font-size: @font-size--h4;
+		padding: 1.9rem 5% 2.1rem;
+		font-size: @font-size--h6;
 		line-height: @line-height--heading;
 		font-weight: @weight--bolden;
 		background-color: rgba(0, 0, 0, .1);
 
 		&--small{
 			display: block;
-			margin: 1rem 0 1.2rem 0;
+			margin: 1rem 0 .2rem 0;
 			font-size: @font-size--smaller;
 			line-height: @line-height--heading;
 			font-weight: @weight--bolden;
@@ -63,31 +64,56 @@
 
 	&__descr{
 		margin: 0;
-		margin-bottom: 2rem;
+		margin-bottom: .7rem;
 		font-size: @font-size--medium;
 		line-height: @line-height;
 		font-weight: @text-weight;
 
 		&--you-get{
-			margin-bottom: 3rem;
+			margin-bottom: 3.5rem;
 		}
 	}
 
 	&__subtext{
 		display: inline-block;
-		margin-bottom: 0;
+		margin: 0;
 		font-size: @font-size--smaller;
-		line-height: @line-height;
+		line-height: @line-height--heading;
 		font-weight: @text-weight;
 		color: @subtext-color;
 		color: rgba(255, 255, 255, .7);
 		font-style: italic;
 
+		&--small{
+			display: inline-block;
+			margin: 0;
+			font-size: @font-size--smaller;
+			line-height: @line-height--heading;
+			font-weight: @text-weight;
+			color: @subtext--alt;
+			color: rgba(255, 255, 255, .7);
+			font-style: italic;
+
+			>a{
+				display: inline;
+				line-height: @line-height;
+				color: @subtext--alt;
+				color: rgba(255, 255, 255, .7);
+				border-bottom: 1px solid @blue--green;
+
+				&:hover{
+					color: darken(@subtext--alt, 10%);
+					color: darken(rgba(255, 255, 255, .7), 10%);
+				}
+			}
+		}
+
 		>a{
+			display: inline;
 			line-height: @line-height;
 			color: @subtext-color;
 			color: rgba(255, 255, 255, .7);
-			text-decoration: underline;
+			border-bottom: 1px solid @blue--superlight;
 
 			&:hover{
 				color: darken(@subtext-color, 10%);
@@ -113,6 +139,16 @@
 	padding: 0;
 	padding-left: 1em;
 
+	&--more{
+		counter-reset: item-list;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 100%;
+		margin: 0;
+		padding: 0 1.3%;
+	}
+
 	&-item{
 		display: flex;
 		flex-direction: column;
@@ -128,6 +164,18 @@
 
 		&--more{
 			max-width: 15.541vw;
+
+			&-1{
+				margin-right: 3.7%;
+			}
+
+			&-3{
+				margin-right: 2.5%;
+			}
+
+			&-4{
+				margin-right: 5.9%;
+			}
 		}
 
 		&:before{
